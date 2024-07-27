@@ -12,8 +12,9 @@ export default {
   name: 'App',
   data() {
     return {
-      // console.log('App.vue data')
+      // console.log('Wang Zi Cheng Long App.vue')
     };
   },
 }
 </script>
+
