@@ -60,26 +60,9 @@
                 </v-list-item>
             <v-list-item :to="links[1].route">
                 <v-list-item-action>
-                    <v-icon class="white--text">{{ links[1].icon }}</v-icon>
-                    <v-list-item-content>
-                        <v-list-item-title class="white--text">{{ links[1].text }}</v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item-action>
-            </v-list-item>
-            <v-list-item :to="'/music/violin'">
-                    <v-list-item-action>
-                        <v-icon>mdi-chevron-right</v-icon>
-                        <v-icon>mdi-violin</v-icon>
-                        <v-list-item-content>
-                            <v-list-item-title> Violin</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item-action>
-                </v-list-item>
-            <v-list-item :to="links[2].route">
-                <v-list-item-action>
                     <v-icon class="white--text">{{ links[2].icon }}</v-icon>
                     <v-list-item-content>
-                        <v-list-item-title class="white--text">{{ links[2].text }}</v-list-item-title>
+                        <v-list-item-title class="white--text">{{ links[1].text }}</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item-action>
             </v-list-item>
@@ -101,20 +84,12 @@
                         </v-list-item-content>
                     </v-list-item-action>
                 </v-list-item>
-                <v-list-item :to="'/language/spanish'">
-                    <v-list-item-action>
-                        <v-icon>mdi-chevron-right</v-icon>
-                        <v-icon>mdi-alpha-s-box-outline</v-icon>
-                        <v-list-item-content>
-                            <v-list-item-title> Spanish</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item-action>
-                </v-list-item>
-            <v-list-item :to="links[3].route">
+               
+            <v-list-item :to="links[2].route">
                 <v-list-item-action>
-                    <v-icon class="white--text">{{ links[3].icon }}</v-icon>
+                    <v-icon class="white--text">{{ links[2].icon }}</v-icon>
                     <v-list-item-content>
-                        <v-list-item-title class="white--text">{{ links[3].text }}</v-list-item-title>
+                        <v-list-item-title class="white--text">{{ links[2].text }}</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item-action>
             </v-list-item>
@@ -145,7 +120,6 @@ export default {
            drawer: false,
            links: [
                 { icon: 'mdi-math-compass', text: 'Math', route: '/math' },
-                { icon: 'mdi-music-note', text: 'Music', route: '/music' },
                 { icon: 'mdi-web', text: 'Language', route: '/language' },
                 { icon: 'mdi-laptop', text: 'Computing', route: '/compute' },  
             ],
