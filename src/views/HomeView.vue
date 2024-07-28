@@ -19,7 +19,7 @@
     </v-container>
   
     <v-container fluid class="ma-5">
-        <h2>Welcome to 望子成龙 (Wang Zi Cheng Long)</h2>
+        <h2>Welcome to Wang Zi Cheng Long (望子成龙)</h2>
         <h3>Launching Your Child's Lifelong Journey: From Ivy League Aspirations to Enduring Success</h3>
 
         <p> We are parents just like you, on a mission to empower our children to thrive throughout their educational journey. 
@@ -98,9 +98,20 @@
           </v-card>
         </v-col>
       </v-row>
-      <p>This website is designed to empower you with the knowledge and tools to navigate this exciting blend of educational philosophies. 
-        Let's work together to create a learning environment that fosters academic excellence, critical thinking, and a lifelong love of learning in our children.</p>
-
+      <br>
+      <v-row align="center">
+                  <v-col cols="12" md="2" class="pr-md-2">
+                      <v-img src="../assets/battle.jpg" contain height="300"/>
+                  </v-col>
+                  <v-col cols="12" md="6" class="pl-md-2">
+                      <p>Battle Hymn of the Tiger Mother is a memoir by Amy Chua that ignited a global debate on parenting styles. 
+                        Chua candidly shares her experiences raising her daughters with a demanding, Chinese-influenced approach she terms "Tiger Mothering." 
+                        By contrasting her methods with the perceived permissiveness of Western parenting, the book sparked intense discussions about culture, child development, and the appropriate balance between nurture and discipline. 
+                          <a href="https://www.amazon.com/Battle-Hymn-Tiger-Mother-Chua/dp/0143120581/ref=sr_1_1" target="_blank">Battle Hymn of the Tiger Mother Amazon book</a>
+                      </p>
+                  </v-col>
+              </v-row>
+      <br>
       <v-img src="../assets/bridge.jpg"  />
   </v-container>
 
@@ -122,6 +133,9 @@
                 join clubs, volunteer, and take on leadership roles. These experiences showcase their interests, skills, and commitment beyond the classroom.</p>
             </v-card-text>
           </v-card>
+          
+          
+             
         </v-col>
         <v-col cols="12" sm="6">
           <v-card class="pa-4">
