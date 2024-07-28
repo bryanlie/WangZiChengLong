@@ -9,7 +9,7 @@
         <v-row>
             <v-col cols="12">
                 <div>
-                    <h2>Unveiling the Magic: Major Categories of Computer Science</h2>
+                    <h2>Major Categories of Computer Science</h2>
 
                     <p>Ever wondered how the digital world around you functions? 
                         The answer lies in the fascinating realm of computer science. This vast field encompasses a 
@@ -154,6 +154,10 @@
                 </div>
             </v-col>
         </v-row>
+        <br>
+        <p>Can't wait to dive headfirst into the world of programming? Visit the 
+                        <router-link to="/compute/python">Python programming page</router-link>
+                    </p>
     </v-container>
 
     <Footer />
