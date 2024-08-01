@@ -1,4 +1,4 @@
-# 望子成龙 (wang zi cheng long)
+# Wang Zi Cheng Long (望子成龙)
 
 ![home_logo](./src/assets/wangzichenglong.png)
 
@@ -8,15 +8,12 @@ The text in the image is 望子成龍 (wàng zǐ chéng lóng). It is a Chinese 
 The Chinese idiom 望子成龙 (wàng zǐ chéng lóng) is a common expression that reflects the deep-rooted 
 cultural emphasis on parental aspirations for their children's success. There isn't a perfect one-to-one equivalent idiom 
 in English that captures the full meaning of 望子成龙. However, there are a few English expressions that come close 
-depending on the specific aspect you want to emphasize:
+depending on the specific aspect you want to emphasize. For example, if you want to emphasize the parents in such a context, it is close to Tiger Mom. 
+
+A Tiger Mom is a term popularized by author Amy Chua to describe a parenting style characterized by extreme strictness and high expectations,
+primarily focused on academic achievement and success. These parents often push their children relentlessly, prioritizing studies over extracurricular activities or social life.
     
-
-https://www.collegetransitions.com/dataverse/academic-competitions-and-contests?utm_content=342143152744
-     
-
- <v-btn text @click="showMore = !showMore">
-          {{ showMore ? 'Show Less' : 'Show More' }}
-        </v-btn>
+# This is a Vue.js project
 
 ## Project setup
 ```
@@ -33,20 +30,8 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### funding
-- go fund me
 
-<p><strong>Google Code Jam:</strong>
-    This is an annual online coding competition open to programmers of all ages and experience levels. 
-    Google Code Jam offers a great opportunity for students to test their coding skills against a global 
-    audience and win prizes like internships at Google.
-    <a href="https://zibada.guru/gcj/" target="_blank">Google Code Jam Archive</a>
-</p>
-
-- https://codeforces.com/
 
 
   
