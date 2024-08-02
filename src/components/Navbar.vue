@@ -21,17 +21,10 @@
             </v-tabs>
             
             <v-spacer></v-spacer>
-            <v-btn icon>
-                <v-icon>mdi-magnify</v-icon>
-            </v-btn>
-                
-            <v-btn icon>
-                <v-icon>mdi-translate</v-icon>
-            </v-btn>
 
-            <v-btn icon>
+            <!-- <v-btn icon @click="$router.push('/about')">
                 <v-icon>mdi-gift</v-icon>
-            </v-btn>
+            </v-btn> -->
         </v-toolbar>
 
         <v-navigation-drawer
@@ -109,6 +102,7 @@
 </template>
 
 <script>
+
 export default {
     name: 'Navbar',
     props: {
