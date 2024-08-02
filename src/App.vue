@@ -12,9 +12,11 @@ export default {
   name: 'App',
   data() {
     return {
-      // console.log('Wang Zi Cheng Long App.vue')
+      customTitle: 'Wang Zi Cheng Long'
     };
   },
+  mounted() {
+    document.title = this.customTitle;
+  }
 }
 </script>
-
