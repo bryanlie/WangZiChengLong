@@ -33,25 +33,32 @@
       <v-col cols="12" md="6">
         <div class="text-center">
           <h2>Communication</h2>
-          <p>
-            You can reach out to us via email at <a target="_blank" :href="`mailto:${myemail}`">
-              {{ myemail }}
-            </a>
-          </p>
+          <p>Please send us your feedback, thank you!</p>
+          <form @submit.prevent="submitForm">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" v-model="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" v-model="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" rows="5" v-model="message" placeholder="Leave a Message" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
+
         </div>
       </v-col>
       <v-col cols="12" md="6">
         <div class="text-center">
           
           <h2>Donation</h2>
-          <div class="paypal-button-container">
-            <div id="paypal-button-container" ref="paypalButtonContainer"></div>
-            <p>          If you would like to support this project, you can donate to us via PayPal or any Debit/Credit card. 
-              <br>
-              Thank you for your support! We will use the raised money to further improve this website. </p>
-          </div>
-         
-          
+          <p>  If you would like to support the kids who can benefit from this project, you can donate to us via PayPal or any Debit/Credit card. 
+              We will use the raised money to further improve user experience on this website. Thank you for your support!</p>
+          <PayPalDonateButton />
         </div>
       </v-col>
     </v-row>
@@ -62,59 +69,79 @@
 
 <script>
 import Navbar from '../components/Navbar.vue';
-import { loadScript } from '@paypal/paypal-js';
+import PayPalDonateButton from '../components/PayPalDonateButton.vue';
+import emailjs from 'emailjs-com'
 
 
 export default {
     name: 'AboutView',
     components: {
-        Navbar
+        Navbar, PayPalDonateButton
     },
     data() {
         return {
-            myemail: 'danli091981@gmail.com',
+            name: '',
+            email: '',
+            message: ''
           };
     },
-    async mounted() {
-        const paypalSdk = await loadScript({
-            'client-id': 'AUbbqD2mZHIWmaxsPzdIxaBVQw6QXNPjwkG-NRZJg3oqYabnURkqyRJSlE835JaW86aWPPEN_d3g-6Ko', 
-            currency: 'USD', 
-        });
+    methods: {
+        submitForm() {
+            // Prepare the template parameters
+            const templateParams = {
+              from_name: this.name,
+              from_email: this.email,
+              message: this.message
+            }
 
-        paypalSdk.Buttons({
-            createOrder: (data, actions) => {
-                return actions.order.create({
-                  purchase_units: [
-                    {
-                      amount: {
-                        value: '1.00', // Replace with the desired amount
-                      },
-                    },
-                  ],
-                });
-            },
-            onApprove: (data, actions) => {
-                return actions.order.capture().then((details) => {
-                  // Handle successful payment
-                  console.log(details);
-                });
-            },
-            onError: (err) => {
-              // Handle errors
-              console.error(err);
-            },
-          }).render('#paypal-button-container');
-  },
+            // Send the email
+            emailjs.send('service_k0usqcn', 'template_cks7b23', templateParams)
+              .then((response) => {
+                console.log('Email sent successfully!', response.status, response.text)
+                // Clear form fields after successful submission
+                this.name = ''
+                this.email = ''
+                this.message = ''
+                // You can add a success message here
+              }, (error) => {
+                console.error('Failed to send email:', error)
+              })
+          }
+    },
+    mounted() {
+      emailjs.init("zyOMB1fZpi05OyRTU")
+    }
+    
 };
 
 </script>
 
 <style scoped>
-.paypal-button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px; 
-  padding: auto;
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;  
+
 }
 </style>
