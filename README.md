@@ -2,32 +2,42 @@
 
 ![home_logo](./src/assets/wangzichenglong.png)
 
-The text in the image is 望子成龍 (wàng zǐ chéng lóng). It is a Chinese idiom that literally translates to "hoping that the son will become a dragon." The idiom is used to describe a parent's hope that their child will grow up to be successful and powerful. It is often used to describe parents who have high expectations for their children and want them to achieve great things.
+## Welcome!
 
-   
-The Chinese idiom 望子成龙 (wàng zǐ chéng lóng) is a common expression that reflects the deep-rooted 
-cultural emphasis on parental aspirations for their children's success. There isn't a perfect one-to-one equivalent idiom 
-in English that captures the full meaning of 望子成龙. However, there are a few English expressions that come close 
-depending on the specific aspect you want to emphasize. For example, if you want to emphasize the parents in such a context, it is close to Tiger Mom. 
+This website is your one-stop resource for empowering your child's lifelong success. We are parents, just like you, dedicated to helping our children thrive - from elementary school all the way to fulfilling careers.
 
-A Tiger Mom is a term popularized by author Amy Chua to describe a parenting style characterized by extreme strictness and high expectations,
-primarily focused on academic achievement and success. These parents often push their children relentlessly, prioritizing studies over extracurricular activities or social life.
-    
-# This is a Vue.js project
+## Our Mission:
 
-## Project setup
-```
-npm install
-```
+   - Guide you through the complexities of modern education.
+   - Share valuable resources to fuel your child's potential.
+   - Build a supportive community of parents on a shared journey.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Together, we can raise the leaders of tomorrow!
 
-### Compiles and minifies for production
-```
-npm run build
+## What We Offer:
+
+   - Cracking the Code to Ivy League Aspirations: Explore a holistic approach to education, equipping you with strategies to nurture your child's academic excellence and well-rounded development.
+   - Success Beyond Graduation: Our focus extends beyond college admissions. We help you foster a lifelong love of learning, explore advanced education opportunities, and prepare your child for a fulfilling career.
+   - Bridging East & West: We acknowledge the distinct strengths of Eastern and Western education philosophies. Learn how to leverage both for a holistic learning experience.
+
+## Key Features:
+
+   - Articles and Guides: In-depth content on various educational topics.
+   - Resource Library: Curated collection of valuable tools and materials.
+
+## Getting Started:
+
+   - Browse the website: Explore our content and discover resources that resonate with your needs.
+
+## Contributing:
+
+We believe in a collaborative approach to education. While we have a growing library of resources, we're always open to suggestions! If you have any ideas or contributions, please feel free to reach out to us.
+
+## Version
+
+- current version: v1.0.0
+- last update: Auguest 2024
+
 ```
 
 
