@@ -37,11 +37,3 @@ We believe in a collaborative approach to education. While we have a growing lib
 
 - current version: v1.0.0
 - last update: Auguest 2024
-
-```
-
-
-
-
-
-  
