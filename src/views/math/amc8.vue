@@ -4,53 +4,59 @@
     <v-container>
         <v-row>
             <v-col cols="12">
-                <h2 class="display-1">AMC (American Mathematics Competitions) 8</h2>
-            </v-col>
-        </v-row>
+            <v-container>
+                <v-row>
+                    <v-col cols="12">
+                        <h2 class="display-1">American Mathematics Competitions (AMC) 8</h2>
+                    </v-col>
+                </v-row>
 
-        <v-row>
-            <v-col cols="12">
-                <h3 class="display-2">What mathematical concepts are covered in AMC 8?</h3>
-                <p class="body-1">
-                    The AMC 8, designed for middle school students (grades 8 and below), tests a variety of mathematical concepts from a typical middle school curriculum. Here's a breakdown of the topics you can expect to encounter:
-                </p>
-            </v-col>
-        </v-row>
+                <v-row>
+                    <v-col cols="12">
+                        <h3 class="display-2">What mathematical concepts are covered in AMC 8?</h3>
+                        <p class="body-1">
+                            The AMC 8, designed for middle school students (grades 8 and below), tests a variety of mathematical concepts from a typical middle school curriculum. Here's a breakdown of the topics you can expect to encounter:
+                        </p>
+                    </v-col>
+                </v-row>
 
-        <v-row>
-            <v-col cols="12">
-                <h3 class="display-2">Core Areas:</h3>
-                <ul>
-                    <li class="body-1">
-                        <strong>Arithmetic and Logic:</strong> This includes basic operations (addition, subtraction, multiplication, division), order of operations, applying mathematical properties (commutative, associative, distributive), understanding divisibility rules, and solving problems using logic and reasoning.
-                    </li>
-                    <li class="body-1">
-                        <strong>Number Theory:</strong> This might involve prime factorization, greatest common divisor (GCD), least common multiple (LCM), working with modular arithmetic (clock problems), exploring number sequences, and understanding basic properties of different number sets (integers, fractions, decimals).
-                    </li>
-                    <li class="body-1">
-                        <strong>Algebraic Word Problems:</strong> The AMC 8 might present word problems requiring translating written descriptions into mathematical equations or inequalities using variables. These problems could involve solving for unknowns or analyzing relationships between variables.
-                    </li>
-                </ul>
-            </v-col>
-        </v-row>
+                <v-row>
+                    <v-col cols="12">
+                        <h3 class="display-2">Core Areas:</h3>
+                        <ul>
+                            <li class="body-1">
+                                <strong>Arithmetic and Logic:</strong> This includes basic operations (addition, subtraction, multiplication, division), order of operations, applying mathematical properties (commutative, associative, distributive), understanding divisibility rules, and solving problems using logic and reasoning.
+                            </li>
+                            <li class="body-1">
+                                <strong>Number Theory:</strong> This might involve prime factorization, greatest common divisor (GCD), least common multiple (LCM), working with modular arithmetic (clock problems), exploring number sequences, and understanding basic properties of different number sets (integers, fractions, decimals).
+                            </li>
+                            <li class="body-1">
+                                <strong>Algebraic Word Problems:</strong> The AMC 8 might present word problems requiring translating written descriptions into mathematical equations or inequalities using variables. These problems could involve solving for unknowns or analyzing relationships between variables.
+                            </li>
+                        </ul>
+                    </v-col>
+                </v-row>
 
-        <v-row>
-            <v-col cols="12">
-                <h3 class="display-2">Additional Topics:</h3>
-                <ul>
-                    <li class="body-1">
-                        <strong>Counting and Probability:</strong> This could involve counting techniques (combinations, permutations), determining probabilities of simple events, and applying basic probability concepts to solve problems.
-                    </li>
-                    <li class="body-1">
-                        <strong>Estimation, Patterns, and Proportional Reasoning:</strong> The AMC 8 might assess your ability to estimate quantities, identify and extend patterns, and solve problems involving ratios and proportions.
-                    </li>
-                    <li class="body-1">
-                        <strong>Elementary Geometry:</strong> Expect questions on geometric shapes (lines, angles, triangles, quadrilaterals, circles), geometric properties (area, perimeter, volume), applying the Pythagorean Theorem, and basic spatial visualization problems.
-                    </li>
-                    <li class="body-1">
-                        <strong>Reading and Interpreting Graphs and Tables:</strong> You might be required to interpret information presented in graphs (bar charts, line graphs, pie charts) and tables, draw conclusions from the data, and solve problems based on the information provided.
-                    </li>
-                </ul>
+                <v-row>
+                    <v-col cols="12">
+                        <h3 class="display-2">Additional Topics:</h3>
+                        <ul>
+                            <li class="body-1">
+                                <strong>Counting and Probability:</strong> This could involve counting techniques (combinations, permutations), determining probabilities of simple events, and applying basic probability concepts to solve problems.
+                            </li>
+                            <li class="body-1">
+                                <strong>Estimation, Patterns, and Proportional Reasoning:</strong> The AMC 8 might assess your ability to estimate quantities, identify and extend patterns, and solve problems involving ratios and proportions.
+                            </li>
+                            <li class="body-1">
+                                <strong>Elementary Geometry:</strong> Expect questions on geometric shapes (lines, angles, triangles, quadrilaterals, circles), geometric properties (area, perimeter, volume), applying the Pythagorean Theorem, and basic spatial visualization problems.
+                            </li>
+                            <li class="body-1">
+                                <strong>Reading and Interpreting Graphs and Tables:</strong> You might be required to interpret information presented in graphs (bar charts, line graphs, pie charts) and tables, draw conclusions from the data, and solve problems based on the information provided.
+                            </li>
+                        </ul>
+                    </v-col>
+                </v-row>
+            </v-container>
             </v-col>
         </v-row>
     </v-container>
