@@ -53,7 +53,7 @@
     <v-container class="my-4">
         <v-row>
             <v-col cols="12">
-                <v-img src="../assets/math_geometry.jpg" class="my-4" contain height="400" />
+                <v-img src="../assets/math_geometry.jpg" class="my-4" contain height="380" />
             </v-col>
         </v-row>
         <v-row>
@@ -120,7 +120,7 @@
     <v-container class="my-4">
         <v-row>
             <v-col cols="12">
-                <v-img src="../assets/math_head.jpeg" class="my-4" contain height="600" />
+                <v-img src="../assets/math_head.jpeg" class="my-4" contain height="580" />
             </v-col>
         </v-row>
         <v-row>
