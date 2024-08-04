@@ -88,7 +88,7 @@
     <v-container class="my-4">
         <v-row>
             <v-col cols="12">
-                <v-img src="../assets/comp_sci_banner.jpg" class="my-4" contain height="600" />
+                <v-img src="../assets/comp_sci_banner.jpg" class="my-4" contain height="532" />
             </v-col>
         </v-row>
         <v-row>
@@ -125,7 +125,7 @@
     <v-container class="my-4">
         <v-row>
             <v-col cols="12">
-                <v-img src="../assets/robots.png" class="my-4" contain height="600" />
+                <v-img src="../assets/robots.png" class="my-4" contain height="516" />
             </v-col>
         </v-row>
         <v-row>
