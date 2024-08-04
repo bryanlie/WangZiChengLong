@@ -7,7 +7,7 @@
             </v-toolbar-title>
             
 
-            <v-spacer></v-spacer>
+    
             <v-tabs
                 v-model="tab"
                 align-with-title
@@ -22,9 +22,9 @@
             
             <v-spacer></v-spacer>
 
-            <!-- <v-btn icon @click="$router.push('/about')">
+            <v-btn icon @click="$router.push('/about')">
                 <v-icon>mdi-gift</v-icon>
-            </v-btn> -->
+            </v-btn>
         </v-toolbar>
 
         <v-navigation-drawer
@@ -111,7 +111,7 @@ export default {
     },
     data() {
         return {
-           drawer: false,
+           drawer: true,
            links: [
                 { icon: 'mdi-math-compass', text: 'Math', route: '/math' },
                 { icon: 'mdi-web', text: 'Language', route: '/language' },
