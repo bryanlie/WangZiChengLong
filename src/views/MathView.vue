@@ -59,7 +59,7 @@
         <v-row>
             <v-col cols="12">
                 <div>
-                    <h2>Popular math competitions for elementary and middle school students</h2>
+                    <h2>Popular math competitions for Elementary and Middle school students</h2>
 
                     <p><strong> <a href="https://mathkangaroo.org/mks/" target="_blank">Math Kangaroo:</a></strong>
                         This worldwide competition focuses on fun and engaging math problems with multiple-choice answers. It caters to grades 1-12, 
@@ -73,12 +73,24 @@
                         It emphasizes creative problem-solving and celebrates the fascination with Pi.
                         <v-row align="center">
                             <v-col cols="12" md="2" class="pr-md-2">
-                                <v-img src="../assets/piMathContest.jpg" contain height="300"/>
+                                <a href="https://www.amazon.com/Math-Contest-Elementary-2015-2018-ALPHASTAR/dp/B09V27HFMP" target="_blank">
+                                    <v-img src="../assets/piMathContestV1.jpg" contain height="300"/>
+                                </a>
+                            </v-col>
+                            <v-col cols="12" md="2" class="pr-md-2">
+                                <a href="https://www.amazon.com/Math-Contest-Elementary-2019-2021-ALPHASTAR/dp/B0BSY4T832/ref=pd_bxgy_d_sccl_1/142-8678302-4789264" target="_blank">
+                                    <v-img src="../assets/piMathContestV2.jpg" contain height="300"/>
+                                </a>
+                            </v-col>
+                            <v-col cols="12" md="2" class="pr-md-2">
+                                <a href="https://www.amazon.com/Pi-Math-Contest-2019-2021-ALPHASTAR/dp/B0BSY4T63L/ref=pd_bxgy_d_sccl_2/142-8678302-4789264" target="_blank">
+                                    <v-img src="../assets/piMathContestV3.jpg" contain height="300"/>
+                                </a>
                             </v-col>
                             <v-col cols="12" md="6" class="pl-md-2">
-                                <p>The Pi Math Contest (PiMC) books for Elementary School Contests are collections of past competition problems and solutions designed to help students prepare for the Pi Math Contest.
-                                    There are currently two volumes available for the Elementary School Contests. 
-                                    <a href="https://www.amazon.com/Math-Contest-Elementary-2015-2018-ALPHASTAR/dp/B09V27HFMP" target="_blank">Pi Math Contest Amazon book</a></p>
+                                <p>The Pi Math Contest (PiMC) offers a series of books designed to help students prepare for their competitions. These books contain collections of past competition problems and their solutions. 
+                                    Currently, there are two volumes available for the Elementary School Contests and one volume for the Middle School Contests.
+                                </p>
                             </v-col>
                         </v-row>
                     </p>
@@ -89,12 +101,29 @@
                         Each contest includes five non-routine problems that require careful mathematical thinking.
                         <v-row align="center">
                             <v-col cols="12" md="2" class="pr-md-2">
-                                <v-img src="../assets/moems.jpg" contain height="300"/>
+                                <a href="https://www.amazon.com/Olympiad-Contest-Problems-Elementary-Schools/dp/0962666211" target="_blank">
+                                    <v-img src="../assets/moemsV1.jpg" contain height="300"/>
+                                </a>
                             </v-col>
-                            <v-col cols="12" md="6" class="pl-md-2">
+                            <v-col cols="12" md="2" class="pr-md-2">
+                                <a href="https://www.amazon.com/Math-Olympiad-Contest-Problems-REVISED/dp/B00XHGQKXU/ref=pd_bxgy_d_sccl_1/142-8678302-4789264" target="_blank">
+                                    <v-img src="../assets/moemsV2.jpg" contain height="300"/>
+                                </a>
+                            </v-col>
+                            <v-col cols="12" md="2" class="pr-md-2">
+                                <a href="https://www.amazon.com/Contest-Problems-Division-Richard-Kalman/dp/1882144120/ref=pd_bxgy_thbs_d_sccl_2/142-8678302-4789264" target="_blank">
+                                    <v-img src="../assets/moemsV3.jpg" contain height="300"/>
+                                </a>
+                            </v-col>
+                            <v-col cols="12" md="2" class="pr-md-2">
+                                <a href="https://www.amazon.com/Moems-Contest-Problems-Vol-International/dp/B0CN1K9V84/ref=sr_1_10" target="_blank">
+                                    <v-img src="../assets/moemsV4.jpg" contain height="300"/>
+                                </a>
+                            </v-col>
+                            <v-col cols="12" md="4" class="pl-md-2">
                                 <p>This is a series of books that compile problems and solutions from the Math Olympiads for Elementary and Middle Schools (MOEMS) competitions. These books are valuable resources for students, teachers, and parents involved in mathematical problem-solving and olympiad preparation.
                                     There are currently four volumes available in this series. 
-                                    <a href="https://www.amazon.com/Olympiad-Contest-Problems-Elementary-Schools/dp/0962666211" target="_blank">Math Olympiad Contest Problems Amazon book</a></p>
+                                </p>
                             </v-col>
                         </v-row>
                     </p>
@@ -126,7 +155,7 @@
         <v-row>
             <v-col cols="12">
                 <div>
-                    <h2>Popular math competitions can benefit college applications</h2>
+                    <h2>Popular math competitions in High school that can benefit college applications</h2>
 
                     <p><strong> <a href="https://maa.org/student-programs/amc/" target="_blank">American Mathematics Competitions (AMC):</a> </strong>
                         This is a multi-tiered competition with the AMC 10/12 for high school students. 
@@ -154,7 +183,7 @@
                     <p><strong>More competitions:</strong>
                         There are numerous other math competitions at the regional, national, and international levels. 
                         Participating in these competitions can help students develop problem-solving skills, 
-                        build a strong math foundation, and stand out in college applications. 
+                        build a strong math foundation, and stand out in college applications. <br>
                         <a href="https://www.artofproblemsolving.com/wiki/index.php/List_of_United_States_high_school_mathematics_competitions" target="_blank">List of US high school Math Competitions</a>
                     </p>
                 </div>
@@ -186,7 +215,7 @@
                         Both exams require strong problem-solving skills using pre-calculus math concepts. Calculators are not allowed since 2008.
                     </p>
 
-                    <p><strong>Importance:</strong>  
+                    <p><strong>Important:</strong>  
                         Scoring well on the AMC 10 or 12 can qualify a student for the next level, the American Invitational Mathematics Examination (AIME).
                         High performance on the AIME and AMC can lead to invitations to the prestigious USA Mathematical Olympiad (USAMO), a training camp for the IMO team.
                         Top scorers on the USAMO are selected to represent the USA at the IMO, the pinnacle of international math competitions for high school students.
