@@ -101,13 +101,15 @@
       <br>
       <v-row align="center">
                   <v-col cols="12" md="2" class="pr-md-2">
+                    <a href="https://www.amazon.com/Battle-Hymn-Tiger-Mother-Chua/dp/0143120581/ref=sr_1_1" target="_blank">
                       <v-img src="../assets/battle.jpg" contain height="300"/>
+                    </a>  
                   </v-col>
                   <v-col cols="12" md="6" class="pl-md-2">
                       <p>Battle Hymn of the Tiger Mother is a memoir by Amy Chua that ignited a global debate on parenting styles. 
                         Chua candidly shares her experiences raising her daughters with a demanding, Chinese-influenced approach she terms "Tiger Mothering." 
                         By contrasting her methods with the perceived permissiveness of Western parenting, the book sparked intense discussions about culture, child development, and the appropriate balance between nurture and discipline. 
-                          <a href="https://www.amazon.com/Battle-Hymn-Tiger-Mother-Chua/dp/0143120581/ref=sr_1_1" target="_blank">Battle Hymn of the Tiger Mother Amazon book</a>
+                        <a href="https://www.amazon.com/Battle-Hymn-of-Tiger-Mother-audiobook/dp/B004INSU48/ref=tmm_aud_swatch_0?_encoding=UTF8&qid=&sr=" target="_blank">Audiobook Free trial</a>
                       </p>
                   </v-col>
               </v-row>
