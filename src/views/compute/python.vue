@@ -40,33 +40,39 @@
                                         <li class="body-1">
                                             <v-row align="center">
                                                 <v-col cols="12" md="2" class="pr-md-2">
-                                                    <v-img src="../../assets/pythonCrashCourse.jpg" contain height="300"/>
+                                                    <a href="https://www.amazon.com/Python-Crash-Course-Eric-Matthes-dp-1718502702/dp/1718502702" target="_blank">
+                                                        <v-img src="../../assets/pythonCrashCourse.jpg" contain height="300"/>
+                                                    </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>This book is a fast-paced, thorough introduction to programming with Python that will have you writing programs, solving problems, and developing functioning applications in no time.
-                                                    <a href="https://www.amazon.com/Python-Crash-Course-Eric-Matthes-dp-1718502702/dp/1718502702" target="_blank">Python Crash Course, 3rd Edition Amazon book</a></p>
+                                                    <p>Python Crash Course, 3rd Edition is a beginner-friendly guide to learning Python programming. It's designed to teach you the basics of Python through hands-on projects, making it easier to understand and apply the concepts. The book covers essential topics like variables, data types, control flow, functions, and object-oriented programming. With its clear explanations and practical examples, this book is a great starting point for anyone interested in learning Python.
+                                                    </p>
                                                 </v-col>
                                             </v-row>
                                         </li>
                                         <li class="body-1">
                                             <v-row align="center">
                                                 <v-col cols="12" md="2" class="pr-md-2">
-                                                    <v-img src="../../assets/autoBoringStuff.jpg" contain height="300"/>
+                                                    <a href="https://www.amazon.com/Automate-Boring-Stuff-Python-2nd/dp/1593279922" target="_blank">
+                                                        <v-img src="../../assets/autoBoringStuff.jpg" contain height="300"/>
+                                                    </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>The second edition of this best-selling Python book uses Python 3 to teach even the technically uninclined how to write programs that do in minutes what would take hours to do by hand. There is no prior programming experience required and the book is loved by liberal arts majors and geeks alike.
-                                                    <a href="https://www.amazon.com/Automate-Boring-Stuff-Python-2nd/dp/1593279922" target="_blank">Automate the Boring Stuff with Python, 2nd Edition Amazon book</a></p>
+                                                    <p>Automate the Boring Stuff with Python, 2nd Edition is a practical guide to learning Python programming. It focuses on using Python to automate repetitive tasks, making your work more efficient and enjoyable. The book covers a wide range of topics, from basic Python syntax to advanced concepts like regular expressions and web scraping. With clear explanations, hands-on exercises, and real-world examples, this book is ideal for beginners and experienced programmers alike who want to harness the power of Python for automation.
+                                                    </p>
                                                 </v-col>
                                             </v-row>                                
                                         </li>
                                         <li class="body-1">
                                             <v-row align="center">
                                                 <v-col cols="12" md="2" class="pr-md-2">
-                                                    <v-img src="../../assets/fluentPython.jpg" contain height="300"/>
+                                                    <a href="https://www.amazon.com/Fluent-Python-Concise-Effective-Programming/dp/1492056359" target="_blank">
+                                                        <v-img src="../../assets/fluentPython.jpg" contain height="300"/>
+                                                    </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>This book goes beyond the basics and teaches you how to write effective, idiomatic Python code by leveraging its best—and possibly most neglected—features.
-                                                    <a href="https://www.amazon.com/Fluent-Python-Concise-Effective-Programming/dp/1492056359" target="_blank">Fluent Python, 2nd Edition Amazon book</a></p>
+                                                    <p>Fluent Python, 2nd Edition is a comprehensive guide to mastering the Python programming language. It delves deep into Python's core features, idioms, and best practices, helping you write efficient, expressive, and idiomatic code. The book covers topics such as data structures, functions, object-oriented programming, control flow, and more. Whether you're a seasoned Python developer or new to the language, this book will equip you with the knowledge to write elegant and effective Python code.
+                                                    </p>
                                                 </v-col>
                                             </v-row>                                
                                         </li>
@@ -122,33 +128,39 @@
                                         <li class="body-1">
                                             <v-row align="center">
                                                 <v-col cols="12" md="2" class="pr-md-2">
-                                                    <v-img src="../../assets/handson-ML.jpg" contain height="300"/>
+                                                    <a href="https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/9355421982" target="_blank">
+                                                        <v-img src="../../assets/handson-ML.jpg" contain height="300"/>
+                                                    </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>This book is a practical guide that introduces machine learning concepts and techniques using popular Python libraries like Scikit-Learn, Keras, and TensorFlow. It covers various topics like regression, classification, clustering, neural networks, and deep learning.
-                                                    <a href="https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/9355421982" target="_blank">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 3rd Edition Amazon book</a></p>
+                                                    <p>Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow is a practical guide to building intelligent systems. It uses real-world examples and minimal theory to teach readers how to apply machine learning concepts to various tasks. The book covers a wide range of techniques, from classic algorithms to deep learning, using popular Python libraries like Scikit-Learn, Keras, and TensorFlow. It's a great resource for anyone interested in learning machine learning and applying it to solve real-world problems.
+                                                    </p>
                                                 </v-col>
                                             </v-row>
                                         </li>
                                         <li class="body-1">
                                             <v-row align="center">
                                                 <v-col cols="12" md="2" class="pr-md-2">
-                                                    <v-img src="../../assets/dpPython.jpg" contain height="300"/>
+                                                    <a href="https://www.amazon.com/Deep-Learning-Python-Francois-Chollet/dp/1617294438" target="_blank">
+                                                        <v-img src="../../assets/dpPython.jpg" contain height="300"/>
+                                                    </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>This book is a great introduction to deep learning for those with a basic understanding of Python. It covers the fundamental concepts of deep learning, including neural networks, convolutional neural networks (CNNs), recurrent neural networks (RNNs), and more. The book also includes code examples and exercises to help you practice what you learn.
-                                                    <a href="https://www.amazon.com/Deep-Learning-Python-Francois-Chollet/dp/1617294438" target="_blank">Deep Learning with Python Amazon book</a></p>
+                                                    <p>Deep Learning with Python is a comprehensive guide to the field of deep learning, written by the creator of the Keras library, François Chollet. The book provides a clear and accessible introduction to the concepts and techniques of deep learning, using Python and Keras as the primary tools. Through practical examples and intuitive explanations, readers will learn how to build and train deep learning models for various applications, such as image recognition, natural language processing, and generative modeling.
+                                                    </p>
                                                 </v-col>
                                             </v-row>                                
                                         </li>
                                         <li class="body-1">
                                             <v-row align="center">
                                                 <v-col cols="12" md="2" class="pr-md-2">
-                                                    <v-img src="../../assets/deepLearning.jpg" contain height="300"/>
+                                                    <a href="https://www.amazon.com/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618" target="_blank">
+                                                        <v-img src="../../assets/deepLearning.jpg" contain height="300"/>
+                                                    </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
                                                     <p>This comprehensive textbook covers the foundations of deep learning, including neural networks, optimization algorithms, and learning theory. It's a great resource for those who want a deep understanding of the theoretical underpinnings of deep learning.
-                                                    <a href="https://www.amazon.com/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618" target="_blank">Deep Learning Amazon book</a></p>
+                                                    </p>
                                                 </v-col>
                                             </v-row>                                
                                         </li>
@@ -207,11 +219,13 @@
                                         <li class="body-1">
                                             <v-row align="center">
                                                 <v-col cols="12" md="2" class="pr-md-2">
-                                                    <v-img src="../../assets/generative_dp.jpg" contain height="300"/>
+                                                    <a href="https://www.amazon.com/Generative-Deep-Learning-Teaching-Machines/dp/1098134184/ref=sr_1_4" target="_blank">
+                                                        <v-img src="../../assets/generative_dp.jpg" contain height="300"/>
+                                                    </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>This book is a comprehensive guide to the field of generative AI, focusing on deep learning techniques. This book offers both theoretical knowledge and practical implementation of generative models.
-                                                    <a href="https://www.amazon.com/Generative-Deep-Learning-Teaching-Machines/dp/1098134184/ref=sr_1_4" target="_blank">Generative Deep Learning: Teaching Machines To Paint, Write, Compose, and Play, 2nd Edition Amazon book</a></p>
+                                                    <p>Generative Deep Learning: Teaching Machines to Paint, Write, Compose, and Play (2nd Edition) is a comprehensive guide to the exciting field of generative deep learning. This book explores how artificial intelligence can be used to create new and original content, such as art, music, and text. With clear explanations and practical examples, the author guides readers through the process of building and training generative models using TensorFlow and Keras. Whether you're a seasoned machine learning engineer or just starting out, this book provides valuable insights into the cutting-edge world of generative AI.
+                                                    </p>
                                                 </v-col>
                                             </v-row>
                                         </li>
