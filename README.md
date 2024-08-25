@@ -42,7 +42,7 @@ We believe in a collaborative approach to education. While we have a growing lib
 - Install Node.js and NPM
 - Install Codium.ai on VS Code
 - Pull the repo and run it locally
-- Test Paypal API
+- Test Paypal API, turn on business version
 - Check Docker desktop, find a cheat sheet for Docker
 - make a dockerfile for the web app (Nginx)
 - Build a docker image and run it locally
