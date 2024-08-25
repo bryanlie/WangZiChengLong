@@ -37,3 +37,15 @@ We believe in a collaborative approach to education. While we have a growing lib
 
 - current version: v1.0.0
 - last update: Auguest 2024
+
+## TODO
+- Install Node.js and NPM
+- Install Codium.ai on VS Code
+- Pull the repo and run it locally
+- Test Paypal API
+- Check Docker desktop, find a cheat sheet for Docker
+- make a dockerfile for the web app (Nginx)
+- Build a docker image and run it locally
+- Register AWS account using the new Gmail
+- use ECS to publish the web app
+- use Jenkins to connect GitHub with ECS
