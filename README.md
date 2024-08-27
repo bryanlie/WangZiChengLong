@@ -39,13 +39,15 @@ We believe in a collaborative approach to education. While we have a growing lib
 - last update: Auguest 2024
 
 ## TODO
-- Install Node.js and NPM
-- Install Codium.ai on VS Code
-- Pull the repo and run it locally
 - Test Paypal API, turn on business version
-- Check Docker desktop, find a cheat sheet for Docker
-- make a dockerfile for the web app (Nginx)
-- Build a docker image and run it locally
 - Register AWS account using the new Gmail
 - use ECS to publish the web app
 - use Jenkins to connect GitHub with ECS
+- check for other deployment plans, e.g.  Vercel
+- learn EKS and replace ECS + Fargate with EKS to publish the web app
+- finalize the best deployment strategy and publish to the public
+- add google ads
+- add amazon affilicate and replace amazon links
+- publish the web app and monitor it using google analytics
+- build a backlog for the web app
+- 
