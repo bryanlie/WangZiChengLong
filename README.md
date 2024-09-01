@@ -40,56 +40,102 @@ We believe in a collaborative approach to education. While we have a growing lib
 
 ## TODO
 - Test Paypal API, turn on business version
-- use ECS to publish the web app
-  
-To publish a web app based on an image in AWS ECR, you'll need to follow these steps:
-
-    Ensure your Docker image is pushed to ECR:
-    Make sure your web app's Docker image is already pushed to your ECR repository
-
-.
-Create an ECS Task Definition:
-
-    Open the Amazon ECS console
-    Navigate to "Task Definitions" and click "Create new Task Definition"
-    Choose a launch type (e.g., EC2 or Fargate)
-    Configure the task with your ECR image URI, required CPU/memory, and necessary port mappings
-
-Set up an ECS Cluster:
-
-    In the ECS console, go to "Clusters" and click "Create Cluster"
-    Choose a cluster template (e.g., EC2 Linux + Networking or Fargate)
-    Configure the cluster settings as needed
-
-Create an ECS Service:
-
-    In your cluster, create a new service
-    Select the task definition you created earlier
-    Configure the service with desired number of tasks, networking options, and load balancing if required
-
-Configure networking:
-
-    Set up a load balancer if you want to distribute traffic across multiple instances of your app
-    Configure security groups to allow inbound traffic on the necessary ports
-
-Launch your service:
-
-    Review your settings and launch the service
-    ECS will pull the image from ECR and deploy it according to your service configuration
-
-Access your web app:
-
-    Once the service is running, you can access your web app through the load balancer's DNS name or the public IP of the EC2 instance (if not using a load balancer)
-
-Monitor and scale:
-
-    Use Amazon CloudWatch to monitor your application's performance
-    Adjust the number of tasks or set up auto-scaling rules as needed
-
-Remember to ensure that your ECS tasks have the necessary permissions to pull images from ECR. You may need to attach an appropriate IAM role to your ECS task execution role.
-
-
 - use Jenkins to connect GitHub with ECS
+
+- To use Jenkins to connect GitHub with ECS and automate the publishing of a Vue.js web app, you can set up a pipeline that does the following:
+
+    Pull code from GitHub
+    Build the Vue.js app
+    Create a Docker image
+    Push the image to Amazon ECR
+    Deploy the image to ECS
+
+Here's a step-by-step guide to set this up:
+
+    Set up Jenkins with necessary plugins:
+        GitHub plugin
+        Amazon ECR plugin
+        Amazon ECS plugin
+        Docker plugin
+    Create credentials in Jenkins for:
+        GitHub access
+        AWS access (IAM user with ECR and ECS permissions)
+    Create a Jenkinsfile in your GitHub repository:
+
+groovy
+pipeline {
+    agent any
+    
+    environment {
+        AWS_ACCOUNT_ID="your-aws-account-id"
+        AWS_DEFAULT_REGION="your-aws-region" 
+        IMAGE_REPO_NAME="your-ecr-repo-name"
+        IMAGE_TAG="${env.BUILD_NUMBER}"
+        REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
+    }
+   
+    stages {
+        
+        stage('Checkout') {
+            steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/your-repo.git']])
+            }
+        }
+    
+        stage('Build') {
+            steps {
+                sh 'npm install'
+                sh 'npm run build'
+            }
+        }
+    
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    dockerImage = docker.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}"
+                }
+            }
+        }
+   
+        stage('Push to ECR') {
+            steps {
+                script {
+                    sh "aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
+                    sh "docker tag ${IMAGE_REPO_NAME}:${IMAGE_TAG} ${REPOSITORY_URI}:$IMAGE_TAG"
+                    sh "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}:${IMAGE_TAG}"
+                }
+            }
+        }
+        
+        stage('Deploy to ECS') {
+            steps {
+                withAWS(credentials: 'your-aws-credentials-id', region: "${AWS_DEFAULT_REGION}") {
+                    sh 'aws ecs update-service --cluster your-cluster-name --service your-service-name --force-new-deployment'
+                }
+            }
+        }
+    }
+}
+
+    Create a Dockerfile in your repository:
+
+    In Jenkins, create a new pipeline job:
+        Choose "Pipeline script from SCM" in the pipeline definition
+        Select Git as SCM
+        Enter your GitHub repository URL
+        Specify the branch to build
+        Set the script path to "Jenkinsfile"
+    Set up webhook in GitHub:
+        Go to your GitHub repository settings
+        Click on "Webhooks"
+        Add webhook
+        Set Payload URL to your Jenkins URL (e.g., http://your-jenkins-url/github-webhook/)
+        Choose "application/json" for content type
+        Select "Just the push event"
+    Make sure your ECS cluster and service are set up in AWS.
+
+Now, whenever you push changes to your GitHub repository, it will trigger the Jenkins pipeline, which will build your Vue.js app, create a Docker image, push it to ECR, and deploy it to your ECS cluster. Remember to replace placeholders like your-aws-account-id, your-aws-region, your-ecr-repo-name, your-cluster-name, and your-service-name with your actual AWS and ECS details.
+
 - use GitHub Actions to connect GitHub with ECS
 - check for other deployment plans, e.g.  Vercel
 - learn EKS and replace ECS + Fargate with EKS to publish the web app
@@ -98,4 +144,4 @@ Remember to ensure that your ECS tasks have the necessary permissions to pull im
 - add amazon affilicate and replace amazon links
 - publish the web app and monitor it using google analytics
 - build a backlog for the web app
-- 
+- use a domain name to replace the public IP
