@@ -43,6 +43,7 @@ We believe in a collaborative approach to education. While we have a growing lib
 - Test Paypal API, turn on business version
 - add google ads
 - switch between Chinese and English
+- Data analysis and visualization
 
 ## Yimin
 - use Jenkins to connect GitHub with ECS
