@@ -39,7 +39,12 @@ We believe in a collaborative approach to education. While we have a growing lib
 - last update: Auguest 2024
 
 ## TODO
+## Dan
 - Test Paypal API, turn on business version
+- add google ads
+- switch between Chinese and English
+
+## Yimin
 - use Jenkins to connect GitHub with ECS
 
 - To use Jenkins to connect GitHub with ECS and automate the publishing of a Vue.js web app, you can set up a pipeline that does the following:
@@ -140,7 +145,7 @@ Now, whenever you push changes to your GitHub repository, it will trigger the Je
 - check for other deployment plans, e.g.  Vercel
 - learn EKS and replace ECS + Fargate with EKS to publish the web app
 - finalize the best deployment strategy and publish to the public
-- add google ads
+
 - add amazon affilicate and replace amazon links
 - publish the web app and monitor it using google analytics
 - build a backlog for the web app
