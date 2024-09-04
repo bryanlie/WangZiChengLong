@@ -41,9 +41,10 @@ We believe in a collaborative approach to education. While we have a growing lib
 ## TODO
 ## Dan
 - Test Paypal API, turn on business version
-- add google ads
 - switch between Chinese and English
 - Data analysis and visualization
+- add google ads
+- add amazon affilicate and replace amazon links
 
 ## Yimin
 - use Jenkins to connect GitHub with ECS
@@ -147,7 +148,7 @@ Now, whenever you push changes to your GitHub repository, it will trigger the Je
 - learn EKS and replace ECS + Fargate with EKS to publish the web app
 - finalize the best deployment strategy and publish to the public
 
-- add amazon affilicate and replace amazon links
+
 - publish the web app and monitor it using google analytics
 - build a backlog for the web app
 - use a domain name to replace the public IP
