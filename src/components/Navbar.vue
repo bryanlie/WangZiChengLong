@@ -22,6 +22,9 @@
             
             <v-spacer></v-spacer>
 
+            <v-btn icon @click="toggleLanguage">
+                <v-icon>mdi-translate</v-icon>
+            </v-btn>
             <v-btn icon @click="$router.push('/about')">
                 <v-icon>mdi-gift</v-icon>
             </v-btn>
@@ -123,6 +126,13 @@ export default {
                 { icon: 'about', text: 'About', route: '/about' },
             ]
         };
+    },
+    methods: {
+        toggleLanguage() {
+        // Assuming you have two languages: 'en' and 'secondLanguage'
+        const currentLocale = this.$i18n.locale;
+        this.$i18n.locale = currentLocale === 'en' ? 'ch' : 'en';
+        },
     },
 };
 </script>

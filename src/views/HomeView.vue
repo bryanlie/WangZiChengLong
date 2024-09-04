@@ -19,7 +19,7 @@
     </v-container>
   
     <v-container fluid class="ma-5">
-        <h2>Welcome to Wang Zi Cheng Long (望子成龙)</h2>
+        <h2> {{ $t('welcome') }} </h2>
         <h3>Launching Your Child's Lifelong Journey: From Ivy League Aspirations to Enduring Success</h3>
 
         <p> We are parents just like you, on a mission to empower our children to thrive throughout their educational journey. 
