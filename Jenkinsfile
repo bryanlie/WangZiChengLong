@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCOUNT_ID=${{ secrets.AWS_ACCOUNT_ID }}
+        AWS_ACCOUNT_ID=credentials('aws-account-id')
         AWS_DEFAULT_REGION="us-east-1" 
         IMAGE_REPO_NAME="WangZiChengLong"
         IMAGE_TAG="${env.BUILD_NUMBER}"
@@ -39,7 +39,7 @@ pipeline {
         }        
         stage('Deploy to ECS') {
             steps {
-                withAWS(credentials: ${{ secrets.AWS_CREDENTIALS_ID }}, region: "${AWS_DEFAULT_REGION}") {
+                withAWS(credentials: credentials('aws-jenkins-credentials'), region: "${AWS_DEFAULT_REGION}") {
                     sh 'aws ecs update-service --cluster web-cluster --service my-nginx-service --force-new-deployment'
                 }
             }
