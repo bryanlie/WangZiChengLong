@@ -16,15 +16,15 @@ pipeline {
                     branches: [[name: '*/main']], 
                     userRemoteConfigs: [[
                         url: 'https://github.com/bryanlie/WangZiChengLong.git',
-                        credentialsId: 'github-access-token'
+                        credentialsId: 'github-access-token2'
                     ]]
                 ])
             }
         }
         stage('Build') {
             steps {
-                sh 'npm install'
-                sh 'npm run build'
+                bat 'npm install'
+                bat 'npm run build'
             }
         }
         stage('Build Docker Image') {
