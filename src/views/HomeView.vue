@@ -10,7 +10,7 @@
           <v-card class="pa-4">
             <v-card-text>
               <p class="headline">
-                The text in the image is 望子成龍 (wàng zǐ chéng lóng). This is a Chinese idiom that reflects the deep-rooted cultural emphasis on parental aspirations for their children's success. The idiom is often used to describe a parent's hope that their child will grow up to be successful and powerful. In a sense, it is similar to the Western concept of "Tiger Mom/Dad", which describes parents who have high expectations for their children and want them to achieve great things.
+                {{ $t('homepage.logo_intro') }}
               </p>
             </v-card-text>
           </v-card>
@@ -19,7 +19,7 @@
     </v-container>
   
     <v-container fluid class="ma-5">
-        <h2> {{ $t('welcome') }} </h2>
+        <h2> {{ $t('homepage.welcome') }} </h2>
         <h3>Launching Your Child's Lifelong Journey: From Ivy League Aspirations to Enduring Success</h3>
 
         <p> We are parents just like you, on a mission to empower our children to thrive throughout their educational journey. 
