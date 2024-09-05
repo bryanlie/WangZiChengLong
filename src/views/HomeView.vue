@@ -20,36 +20,30 @@
   
     <v-container fluid class="ma-5">
         <h2> {{ $t('homepage.welcome') }} </h2>
-        <h3>Launching Your Child's Lifelong Journey: From Ivy League Aspirations to Enduring Success</h3>
+        <h3>{{ $t('homepage.header') }}</h3>
 
-        <p> We are parents just like you, on a mission to empower our children to thrive throughout their educational journey. 
-          This website is a platform built on shared experiences and insights, designed to guide you in two crucial aspects:
-        </p>
+        <p>{{ $t('homepage.platform') }} </p>
 
         <v-row>
           <v-col cols="12" md="6">
             <v-card class="pa-4">
               <v-card-text>
-                <h3>Cracking the Code to Ivy League Aspirations</h3>
-                <p>We'll explore a holistic approach to education, from elementary school to college applications, 
-                  equipping you with strategies to nurture your child's academic potential and well-rounded development.</p>
+                <h3>{{ $t('homepage.key_pt1_header') }}</h3>
+                <p>{{ $t('homepage.key_pt1') }}</p>
               </v-card-text>
             </v-card>
           </v-col>
           <v-col cols="12" md="6">
             <v-card class="pa-4">
               <v-card-text>
-                <h3>Success Beyond Graduation</h3>
-                <p>Our focus extends beyond college admissions. We'll delve into fostering a lifelong love of learning, 
-                  exploring advanced education opportunities, and preparing your child for a fulfilling career and a continuously evolving world.</p>
+                <h3>{{ $t('homepage.key_pt2_header') }}</h3>
+                <p>{{ $t('homepage.key_pt2') }}</p>
               </v-card-text>
             </v-card>
           </v-col>
         </v-row>
 
-        <p>Join us on this journey as we navigate the complexities of modern education, 
-          share valuable resources, and build a supportive community to help our children reach their full potential. 
-          Together, we can empower our children to become the leaders of tomorrow.</p>
+        <p>{{ $t('homepage.journey') }}</p>
 
         <v-img src="../assets/yourjourney.jpg"  />
   </v-container>
