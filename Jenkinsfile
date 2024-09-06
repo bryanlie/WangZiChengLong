@@ -8,7 +8,15 @@ pipeline {
         IMAGE_TAG="${env.BUILD_NUMBER}"
     }
 
-    stages {    
+    stages {
+        stage('Initialize Variables') {
+            steps {
+                script {
+                    // Define the global variable here
+                    lowerCaseRepoName = env.IMAGE_REPO_NAME.toLowerCase()
+                }
+            }
+        }
         stage('Checkout') {
             steps {
                 checkout([
@@ -29,8 +37,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                script {
-                    def lowerCaseRepoName = IMAGE_REPO_NAME.toLowerCase()
+                script {                    
                     dockerImage = docker.build "${lowerCaseRepoName}:${IMAGE_TAG}"
                 }
             }
@@ -38,11 +45,14 @@ pipeline {
         stage('Push to ECR') {
             steps {
                 script {
-                    REPOSITORY_URI = "${env.AWS_ACCOUNT_ID}.dkr.ecr.${env.AWS_DEFAULT_REGION}.amazonaws.com/${env.IMAGE_REPO_NAME}"
-                    withCredentials([string(credentialsId: 'aws-account-id', variable: 'AWS_ACCOUNT_ID')]) {
+                    REPOSITORY_URI = "${env.AWS_ACCOUNT_ID}.dkr.ecr.${env.AWS_DEFAULT_REGION}.amazonaws.com/${lowerCaseRepoName}"
+                    withCredentials([[
+                        $class: 'AmazonWebServicesCredentialsBinding',
+                        credentialsId: 'aws-account-id'
+                    ]]) {
                         bat """
                             aws ecr get-login-password --region ${env.AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${REPOSITORY_URI}
-                            docker tag ${env.IMAGE_REPO_NAME}:${env.IMAGE_TAG} ${REPOSITORY_URI}:${env.IMAGE_TAG}
+                            docker tag ${lowerCaseRepoName}:${env.IMAGE_TAG} ${REPOSITORY_URI}:${env.IMAGE_TAG}
                             docker push ${REPOSITORY_URI}:${env.IMAGE_TAG}
                         """
                     }
