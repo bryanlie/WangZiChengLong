@@ -30,7 +30,8 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    dockerImage = docker.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}"
+                    def lowerCaseRepoName = IMAGE_REPO_NAME.toLowerCase()
+                    dockerImage = docker.build "${lowerCaseRepoName}:${IMAGE_TAG}"
                 }
             }
         }
