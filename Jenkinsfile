@@ -46,10 +46,7 @@ pipeline {
             steps {
                 script {
                     REPOSITORY_URI = "${env.AWS_ACCOUNT_ID}.dkr.ecr.${env.AWS_DEFAULT_REGION}.amazonaws.com/${lowerCaseRepoName}"
-                    withCredentials([[
-                        $class: 'AmazonWebServicesCredentialsBinding',
-                        credentialsId: 'aws-account-id'
-                    ]]) {
+                    withAWS(Credentials: 'aws-jenkins-credentials', region: "${env.AWS_DEFAULT_REGION}"){
                         bat """
                             aws ecr get-login-password --region ${env.AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${REPOSITORY_URI}
                             docker tag ${lowerCaseRepoName}:${env.IMAGE_TAG} ${REPOSITORY_URI}:${env.IMAGE_TAG}
