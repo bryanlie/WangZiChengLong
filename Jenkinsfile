@@ -6,6 +6,9 @@ pipeline {
         AWS_DEFAULT_REGION="us-east-1" 
         IMAGE_REPO_NAME="WangZiChengLong"
         IMAGE_TAG="${env.BUILD_NUMBER}"
+        PUBLIC_ECR_REGISTRY = "public.ecr.aws"
+        PUBLIC_ECR_ALIAS = "r0c3j2a2"
+        PUBLIC_ECR_REPOSITORY = "vuejsweb"
     }
 
     stages {
@@ -42,15 +45,15 @@ pipeline {
                 }
             }
         }
-        stage('Push to ECR') {
+        stage('Push to Public ECR') {
             steps {
                 script {
-                    REPOSITORY_URI = "${env.AWS_ACCOUNT_ID}.dkr.ecr.${env.AWS_DEFAULT_REGION}.amazonaws.com/${lowerCaseRepoName}"
-                    withAWS(Credentials: 'aws-jenkins-credentials', region: "${env.AWS_DEFAULT_REGION}"){
+                    REPOSITORY_URI = "${PUBLIC_ECR_REGISTRY}/${PUBLIC_ECR_ALIAS}/${PUBLIC_ECR_REPOSITORY}/${lowerCaseRepoName}"
+                    withAWS(credentials: 'aws-jenkins-credentials', region: "${AWS_DEFAULT_REGION}"){
                         bat """
-                            aws ecr get-login-password --region ${env.AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${REPOSITORY_URI}
-                            docker tag ${lowerCaseRepoName}:${env.IMAGE_TAG} ${REPOSITORY_URI}:${env.IMAGE_TAG}
-                            docker push ${REPOSITORY_URI}:${env.IMAGE_TAG}
+                            aws ecr-public get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${PUBLIC_ECR_REGISTRY}/${PUBLIC_ECR_ALIAS}
+                            docker tag ${lowerCaseRepoName}:${IMAGE_TAG} ${REPOSITORY_URI}:latest
+                            docker push ${REPOSITORY_URI}:latest
                         """
                     }
                 }
