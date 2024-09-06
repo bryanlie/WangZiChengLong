@@ -39,15 +39,19 @@ pipeline {
             steps {
                 script {
                     REPOSITORY_URI = "${env.AWS_ACCOUNT_ID}.dkr.ecr.${env.AWS_DEFAULT_REGION}.amazonaws.com/${env.IMAGE_REPO_NAME}"
-                    bat "aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
-                    bat "docker tag ${IMAGE_REPO_NAME}:${IMAGE_TAG} ${REPOSITORY_URI}:$IMAGE_TAG"
-                    bat "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}:${IMAGE_TAG}"
+                    withCredentials([string(credentialsId: 'aws-account-id', variable: 'AWS_ACCOUNT_ID')]) {
+                        bat """
+                            aws ecr get-login-password --region ${env.AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${REPOSITORY_URI}
+                            docker tag ${env.IMAGE_REPO_NAME}:${env.IMAGE_TAG} ${REPOSITORY_URI}:${env.IMAGE_TAG}
+                            docker push ${REPOSITORY_URI}:${env.IMAGE_TAG}
+                        """
+                    }
                 }
             }
         }        
         stage('Deploy to ECS') {
             steps {
-                withAWS(credentials: credentials('aws-jenkins-credentials'), region: "${AWS_DEFAULT_REGION}") {
+                withAWS(credentials: credentials('aws-jenkins-credentials'), region: "${env.AWS_DEFAULT_REGION}") {
                     bat 'aws ecs update-service --cluster web-cluster --service my-nginx-service --force-new-deployment'
                 }
             }
