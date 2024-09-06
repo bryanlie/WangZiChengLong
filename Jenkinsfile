@@ -16,7 +16,7 @@ pipeline {
                     branches: [[name: '*/main']], 
                     userRemoteConfigs: [[
                         url: 'https://github.com/bryanlie/WangZiChengLong.git',
-                        credentialsId: 'github-access-token2'
+                        credentialsId: 'github-access-token'
                     ]]
                 ])
             }
