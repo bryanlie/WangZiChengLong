@@ -52,8 +52,8 @@ pipeline {
                     withAWS(credentials: 'aws-jenkins-credentials', region: "${AWS_DEFAULT_REGION}"){
                         bat """
                             aws ecr-public get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${PUBLIC_ECR_REGISTRY}/${PUBLIC_ECR_ALIAS}
-                            docker tag ${lowerCaseRepoName}:${IMAGE_TAG} ${REPOSITORY_URI}:latest
-                            docker push ${REPOSITORY_URI}:latest
+                            docker tag ${lowerCaseRepoName}:${IMAGE_TAG} ${REPOSITORY_URI}:${IMAGE_TAG}
+                            docker push ${REPOSITORY_URI}:${IMAGE_TAG}
                         """
                     }
                 }
