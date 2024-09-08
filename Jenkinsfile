@@ -34,8 +34,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'npm install'
-                bat 'npm run build'
+                sh 'npm install'
+                sh 'npm run build'
             }
         }
         stage('Build Docker Image') {
@@ -50,7 +50,7 @@ pipeline {
                 script {
                     REPOSITORY_URI = "${PUBLIC_ECR_REGISTRY}/${PUBLIC_ECR_ALIAS}/${PUBLIC_ECR_REPOSITORY}/${lowerCaseRepoName}"
                     withAWS(credentials: 'aws-jenkins-credentials', region: "${AWS_DEFAULT_REGION}"){
-                        bat """
+                        sh """
                             aws ecr-public get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${PUBLIC_ECR_REGISTRY}/${PUBLIC_ECR_ALIAS}
                             docker tag ${lowerCaseRepoName}:${IMAGE_TAG} ${REPOSITORY_URI}:${IMAGE_TAG}
                             docker push ${REPOSITORY_URI}:${IMAGE_TAG}
@@ -62,7 +62,7 @@ pipeline {
         stage('Deploy to ECS') {
             steps {
                 withAWS(credentials: credentials('aws-jenkins-credentials'), region: "${env.AWS_DEFAULT_REGION}") {
-                    bat 'aws ecs update-service --cluster web-cluster --service my-nginx-service --force-new-deployment'
+                    sh 'aws ecs update-service --cluster web-cluster --service my-nginx-service --force-new-deployment'
                 }
             }
         }
