@@ -24,7 +24,7 @@ pipeline {
             steps {
                 checkout([
                     $class: 'GitSCM',
-                    branches: [[name: '*/main']], 
+                    branches: [[name: '*/linux']], 
                     userRemoteConfigs: [[
                         url: 'https://github.com/bryanlie/WangZiChengLong.git',
                         credentialsId: 'github-access-token'
