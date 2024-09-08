@@ -1,5 +1,9 @@
 pipeline { 
-    agent any
+    agent {
+        docker {
+            image 'node:14' // or whatever version you need
+        }
+    }
 
     environment {
         AWS_ACCOUNT_ID=credentials('aws-account-id')
