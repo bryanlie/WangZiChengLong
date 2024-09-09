@@ -9,7 +9,7 @@ pipeline {
         PUBLIC_ECR_REGISTRY = "public.ecr.aws"
         PUBLIC_ECR_ALIAS = "r0c3j2a2"
         PUBLIC_ECR_REPOSITORY = "vuejsweb"
-        DOCKER_IMAGE = "node:14"
+        DOCKER_IMAGE = "node:20"
     }
 
     stages {
