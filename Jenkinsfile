@@ -38,12 +38,19 @@ pipeline {
             agent {
                 docker {
                     image "${DOCKER_IMAGE}"
-                    reuseNode true
+                    args '-u root:root'  // Run as root to avoid permission issues
                 }
             }
             steps {
-                sh 'npm install'
-                sh 'npm run build'
+                sh '''
+                    # Create and set permissions for npm cache directory
+                    mkdir -p /.npm
+                    chmod -R 777 /.npm
+
+                    # Run npm commands
+                    npm install
+                    npm run build
+                '''
             }
         }
         
