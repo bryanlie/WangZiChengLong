@@ -80,9 +80,19 @@ pipeline {
         stage('Deploy to ECS') {
             steps {
                 withAWS(credentials: 'aws-jenkins-credentials', region: "${env.AWS_DEFAULT_REGION}") {
-                    sh 'aws ecs update-service --cluster web-cluster --service my-nginx-service --force-new-deployment'
+                    sh '''
+                        echo "Listing ECS Clusters:"
+                        aws ecs list-clusters
+                        
+                        echo "\nListing ECS Services in web-cluster:"
+                        aws ecs list-services --cluster web-cluster
+                        
+                        echo "\nAttempting to update service:"
+                        aws ecs update-service --cluster web-cluster --service my-nginx-service --force-new-deployment
+                    '''
                 }
             }
         }
+
     }
 }
