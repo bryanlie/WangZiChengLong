@@ -91,7 +91,8 @@ pipeline {
                                 --cluster ${cluster} \
                                 --task-definition ${taskDefinition} \
                                 --count 1 \
-                                --network-configuration "awsvpcConfiguration={subnets=[${subnets}],securityGroups=[${securityGroups}],assignPublicIp=DISABLED}"
+                                --network-configuration "awsvpcConfiguration={subnets=[${subnets}],securityGroups=[${securityGroups}],assignPublicIp=DISABLED}" \
+                                --launch-type FARGATE
                         """
                     }
                 }
