@@ -91,18 +91,55 @@ pipeline {
             }
         }
 
-        stage('List ECS Resources') {
+        stage('Verify ECS Cluster') {
             steps {
                 withAWS(credentials: 'aws-jenkins-credentials', region: "${env.AWS_DEFAULT_REGION}") {
                     sh '''
                         echo "Listing ECS Clusters:"
                         aws ecs list-clusters
-                        echo "\nListing ECS Services in web-cluster:"
-                        aws ecs list-services --cluster web-cluster || echo "Failed to list services"
+                        echo "\nDescribing web-cluster:"
+                        aws ecs describe-clusters --clusters web-cluster
                     '''
                 }
             }
         }
+
+        stage('Check All ECS Services') {
+            steps {
+                withAWS(credentials: 'aws-jenkins-credentials', region: "${env.AWS_DEFAULT_REGION}") {
+                    sh '''
+                        for cluster in $(aws ecs list-clusters --output text --query 'clusterArns[]'); do
+                            echo "Listing services in cluster: $cluster"
+                            aws ecs list-services --cluster $cluster
+                        done
+                    '''
+                }
+            }
+        }
+
+        stage('Create or Update ECS Service') {
+            steps {
+                withAWS(credentials: 'aws-jenkins-credentials', region: "${env.AWS_DEFAULT_REGION}") {
+                    script {
+                        def serviceExists = sh(script: """
+                            aws ecs list-services --cluster web-cluster --query 'contains(serviceArns[], \'*my-nginx-service*\')'
+                        """, returnStdout: true).trim()
+                        
+                        if (serviceExists == 'true') {
+                            sh 'aws ecs update-service --cluster web-cluster --service my-nginx-service --force-new-deployment'
+                        } else {
+                            sh '''
+                                aws ecs create-service --cluster web-cluster --service-name my-nginx-service \
+                                --task-definition your-task-definition:1 --desired-count 1
+                            '''
+                        }
+                    }
+                }
+            }
+        }
+
+
+
 
         
         stage('Deploy to ECS') {
