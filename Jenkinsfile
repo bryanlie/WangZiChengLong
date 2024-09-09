@@ -128,10 +128,7 @@ pipeline {
                         if (serviceExists == 'true') {
                             sh 'aws ecs update-service --cluster web-cluster --service my-nginx-service --force-new-deployment'
                         } else {
-                            sh '''
-                                aws ecs create-service --cluster web-cluster --service-name my-nginx-service \
-                                --task-definition your-task-definition:1 --desired-count 1
-                            '''
+                            sh 'exit 1'
                         }
                     }
                 }
