@@ -57,7 +57,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {                    
-                    dockerImage = docker.build "${lowerCaseRepoName}:${IMAGE_TAG}"
+                    dockerImage = docker.build "${lowerCaseRepoName}:latest"
                 }
             }
         }
