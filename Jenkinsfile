@@ -1,29 +1,26 @@
-pipeline { 
-    agent {
-        docker {
-            image 'node:14' // or whatever version you need
-        }
-    }
+pipeline {
+    agent any
 
     environment {
-        AWS_ACCOUNT_ID=credentials('aws-account-id')
-        AWS_DEFAULT_REGION="us-east-1" 
-        IMAGE_REPO_NAME="WangZiChengLong"
-        IMAGE_TAG="${env.BUILD_NUMBER}"
+        AWS_ACCOUNT_ID = credentials('aws-account-id')
+        AWS_DEFAULT_REGION = "us-east-1" 
+        IMAGE_REPO_NAME = "WangZiChengLong"
+        IMAGE_TAG = "${env.BUILD_NUMBER}"
         PUBLIC_ECR_REGISTRY = "public.ecr.aws"
         PUBLIC_ECR_ALIAS = "r0c3j2a2"
         PUBLIC_ECR_REPOSITORY = "vuejsweb"
+        DOCKER_IMAGE = "node:14"
     }
 
     stages {
         stage('Initialize Variables') {
             steps {
                 script {
-                    // Define the global variable here
                     lowerCaseRepoName = env.IMAGE_REPO_NAME.toLowerCase()
                 }
             }
         }
+        
         stage('Checkout') {
             steps {
                 checkout([
@@ -36,12 +33,20 @@ pipeline {
                 ])
             }
         }
+        
         stage('Build') {
+            agent {
+                docker {
+                    image "${DOCKER_IMAGE}"
+                    reuseNode true
+                }
+            }
             steps {
                 sh 'npm install'
                 sh 'npm run build'
             }
         }
+        
         stage('Build Docker Image') {
             steps {
                 script {                    
@@ -49,6 +54,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Push to Public ECR') {
             steps {
                 script {
@@ -63,9 +69,10 @@ pipeline {
                 }
             }
         }        
+        
         stage('Deploy to ECS') {
             steps {
-                withAWS(credentials: credentials('aws-jenkins-credentials'), region: "${env.AWS_DEFAULT_REGION}") {
+                withAWS(credentials: 'aws-jenkins-credentials', region: "${env.AWS_DEFAULT_REGION}") {
                     sh 'aws ecs update-service --cluster web-cluster --service my-nginx-service --force-new-deployment'
                 }
             }
