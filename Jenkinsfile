@@ -76,6 +76,34 @@ pipeline {
                 }
             }
         }        
+
+        
+        stage('Verify AWS Configuration') {
+            steps {
+                withAWS(credentials: 'aws-jenkins-credentials', region: "${env.AWS_DEFAULT_REGION}") {
+                    sh '''
+                        echo "AWS Identity:"
+                        aws sts get-caller-identity
+                        echo "\nAWS Configuration:"
+                        aws configure list
+                    '''
+                }
+            }
+        }
+
+        stage('List ECS Resources') {
+            steps {
+                withAWS(credentials: 'aws-jenkins-credentials', region: "${env.AWS_DEFAULT_REGION}") {
+                    sh '''
+                        echo "Listing ECS Clusters:"
+                        aws ecs list-clusters
+                        echo "\nListing ECS Services in web-cluster:"
+                        aws ecs list-services --cluster web-cluster || echo "Failed to list services"
+                    '''
+                }
+            }
+        }
+
         
         stage('Deploy to ECS') {
             steps {
