@@ -77,22 +77,25 @@ pipeline {
             }
         }        
         
-        stage('Deploy to ECS') {
+        stage('Run ECS Task') {
             steps {
                 withAWS(credentials: 'aws-jenkins-credentials', region: "${env.AWS_DEFAULT_REGION}") {
-                    sh '''
-                        echo "Listing ECS Clusters:"
-                        aws ecs list-clusters
+                    script {
+                        def taskDefinition = 'nginx:1'
+                        def cluster = 'web-cluster'
                         
-                        echo "\nListing ECS Services in web-cluster:"
-                        aws ecs list-services --cluster web-cluster
-                        
-                        echo "\nAttempting to update service:"
-                        aws ecs update-service --cluster web-cluster --service my-nginx-service --force-new-deployment
-                    '''
+                        sh """
+                            echo "Running ECS Task"
+                            aws ecs run-task \
+                                --cluster ${cluster} \
+                                --task-definition ${taskDefinition} \
+                                --count 1
+                        """
+                    }
                 }
             }
         }
+
 
     }
 }
