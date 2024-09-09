@@ -5,7 +5,7 @@ pipeline {
         AWS_ACCOUNT_ID = credentials('aws-account-id')
         AWS_DEFAULT_REGION = "us-east-1" 
         IMAGE_REPO_NAME = "WangZiChengLong"
-        IMAGE_TAG = "${env.BUILD_NUMBER}"
+        
         PUBLIC_ECR_REGISTRY = "public.ecr.aws"
         PUBLIC_ECR_ALIAS = "r0c3j2a2"
         PUBLIC_ECR_REPOSITORY = "vuejsweb"
@@ -69,8 +69,8 @@ pipeline {
                     withAWS(credentials: 'aws-jenkins-credentials', region: "${AWS_DEFAULT_REGION}"){
                         sh """
                             aws ecr-public get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${PUBLIC_ECR_REGISTRY}/${PUBLIC_ECR_ALIAS}
-                            docker tag ${lowerCaseRepoName}:${IMAGE_TAG} ${REPOSITORY_URI}:${IMAGE_TAG}
-                            docker push ${REPOSITORY_URI}:${IMAGE_TAG}
+                            docker tag ${lowerCaseRepoName}:latest ${REPOSITORY_URI}:latest
+                            docker push ${REPOSITORY_URI}:latest
                         """
                     }
                 }
