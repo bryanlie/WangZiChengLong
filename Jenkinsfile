@@ -83,8 +83,8 @@ pipeline {
                     script {
                         def taskDefinition = 'nginx:1'
                         def cluster = 'web-cluster'
-                        def subnets = 'subnet-00352c207d1563e53,subnet-088399051f458d457,subnet-0fa727c030a5d4fb7,subnet-0e5aba633686a6391,subnet-0f441890ac51912da,subnet-013382651bfdf4682'  //VPC console, (left side: Subnets)  
-                        def securityGroups = 'sg-00647569fd491cc31' //EC2,(left side:Security Groups)
+                        def subnets = credentials: 'subnets'  //VPC console, (left side: Subnets)  
+                        def securityGroups = credentials: 'securityGroups'  //EC2,(left side:Security Groups)
                         sh """
                             echo "Running ECS Task"
                             aws ecs run-task \
