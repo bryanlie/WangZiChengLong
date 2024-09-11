@@ -48,7 +48,91 @@ We believe in a collaborative approach to education. While we have a growing lib
 
 ## Yimin
 
-- learn EKS and replace ECS + Fargate with EKS to publish the web app
+- deploy the web app to AWS EKS using GitHub Actions
+
+To deploy your web app to AWS EKS using GitHub Actions, you can follow these steps:
+Set Up AWS EKS Cluster
+
+    Create an EKS cluster using the AWS CLI or eksctl tool:
+
+bash
+eksctl create cluster --name your-cluster-name --region your-region --nodegroup-name linux-nodes --node-type t2.micro --nodes 2
+
+Configure GitHub Repository
+
+    Create a .github/workflows directory in your repository.
+    Create a YAML file (e.g., deploy.yml) in the workflows directory to define your GitHub Actions workflow.
+
+Set Up GitHub Actions Workflow
+
+    Configure your workflow file with the following key components:
+
+text
+name: Deploy to EKS
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v3
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: your-aws-region
+
+    - name: Install kubectl
+      uses: azure/setup-kubectl@v3
+      with:
+        version: 'v1.27.1'
+
+    - name: Update kubeconfig
+      run: aws eks get-token --cluster-name your-cluster-name | kubectl apply -f -
+
+    - name: Deploy to EKS
+      run: |
+        kubectl apply -f your-kubernetes-manifests.yaml
+        kubectl rollout status deployment/your-deployment-name
+
+Set Up GitHub Secrets
+
+    Add your AWS credentials as secrets in your GitHub repository:
+        Go to your repository settings
+        Click on "Secrets and variables" then "Actions"
+        Add AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY as new secrets
+
+Prepare Kubernetes Manifests
+
+    Create Kubernetes manifest files (e.g., deployment.yaml, service.yaml) for your web app and add them to your repository.
+
+Push and Deploy
+
+    Commit and push your changes to the main branch. GitHub Actions will automatically trigger the workflow to deploy your app to EKS
+
+    .
+
+Best Practices
+
+    Use IAM roles for authentication instead of long-lived access keys when possible
+
+.
+Consider using OIDC provider for more secure authentication between GitHub and AWS
+.
+Implement proper RBAC (Role-Based Access Control) for your EKS cluster
+
+    .
+    Use environment variables or GitHub secrets for sensitive information.
+    Implement proper testing and staging environments before deploying to production.
+
+By following these steps, you can set up a CI/CD pipeline that automatically deploys your web app to AWS EKS whenever you push changes to your main branch
+  
 - finalize the best deployment strategy and publish to the public
 
 
