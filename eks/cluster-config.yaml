@@ -1,0 +1,22 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: myeks-cluster
+  region: your-region
+
+vpc:
+  id: vpc-xxxxxxxx  # Your VPC ID
+  subnets:
+    private:
+      your-region-1a: { id: subnet-xxxxxxxx }  # Private subnet ID
+      your-region-1b: { id: subnet-yyyyyyyy }  # Another private subnet ID
+  securityGroup: sg-xxxxxxxx  # Security group ID
+
+managedNodeGroups:
+  - name: ng-1
+    instanceType: t3.medium
+    minSize: 1
+    maxSize: 3
+    desiredCapacity: 2
+    privateNetworking: true
