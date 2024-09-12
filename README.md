@@ -137,8 +137,17 @@ By following these steps, you can set up a CI/CD pipeline that automatically dep
 
 `kubectl get nodes` didn't get any nodes since there is no nodegroup available
 
-first prepare a file, let us call it cluster-config.yaml
+first prepare a file, let us call it cluster-config.yaml, and upload it to AWS CloudShell, 
 
+run the following command in CloudShell
+
+`eksctl create nodegroup -f nodegroup.yaml`
+
+you can check the status of creating nodegroup in cloudFormation
+
+if you want to delete the nodegroup, you could use,
+
+`eksctl delete nodegroup --cluster myeks-cluster --name ng-1`
 
   
 - finalize the best deployment strategy and publish to the public
