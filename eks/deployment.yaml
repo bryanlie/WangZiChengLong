@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vuejsweb/wangzichenglong
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: vuejsweb/wangzichenglong
+  template:
+    metadata:
+      labels:
+        app: vuejsweb/wangzichenglong
+    spec:
+      containers:
+      - name: vuejsweb/wangzichenglong
+        image: <your-ecr-repo-url>/vuejsweb/wangzichenglong:latest
+        ports:
+        - containerPort: 80
