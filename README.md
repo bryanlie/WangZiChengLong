@@ -132,6 +132,14 @@ Implement proper RBAC (Role-Based Access Control) for your EKS cluster
     Implement proper testing and staging environments before deploying to production.
 
 By following these steps, you can set up a CI/CD pipeline that automatically deploys your web app to AWS EKS whenever you push changes to your main branch
+
+## fix the issue with EKS
+
+`kubectl get nodes` didn't get any nodes since there is no nodegroup available
+
+first prepare a file, let us call it cluster-config.yaml
+
+
   
 - finalize the best deployment strategy and publish to the public
 
