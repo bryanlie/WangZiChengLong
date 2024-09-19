@@ -47,6 +47,7 @@ We believe in a collaborative approach to education. While we have a growing lib
 - add amazon affilicate and replace amazon links
 
 ## Yimin
+https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-application-load-balancer.html
 
 - deploy the web app to AWS EKS using GitHub Actions
 
