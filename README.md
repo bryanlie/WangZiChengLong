@@ -157,3 +157,5 @@ if you want to delete the nodegroup, you could use,
 - publish the web app and monitor it using google analytics
 - build a backlog for the web app
 - use a domain name to replace the public IP
+
+# develop a website for our company using Vue.js
