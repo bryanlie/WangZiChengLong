@@ -47,6 +47,18 @@ We believe in a collaborative approach to education. While we have a growing lib
 - add amazon affilicate and replace amazon links
 
 ## Yimin
+- Terraform projests based on this web app
+1. Containerized Web Application:
+
+    - Infrastructure: ECS cluster, task definition, load balancer
+    - Deployment: Create a Terraform script to deploy your Vue.js Docker image using Amazon ECS for container orchestration, configure a load balancer for traffic distribution, and manage container services.
+    - Learn: How to create and manage ECS clusters, task definitions, and container services, understand the benefits of containerization, and integrate with load balancers.
+
+2. CI/CD Pipeline:
+
+    - Infrastructure: CodeCommit, CodePipeline, CodeBuild
+    - Deployment: Create a Terraform script to set up a CI/CD pipeline using AWS services, automate the build, test, and deployment process for your Vue.js web app.
+    - Learn: How to integrate Terraform with CI/CD pipelines, automate infrastructure provisioning and application deployment, and implement best practices for continuous delivery.
 
 - publish the web app and monitor it using google analytics
 - build a backlog for the web app
