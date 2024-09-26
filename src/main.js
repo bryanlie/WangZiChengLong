@@ -3,6 +3,7 @@ import { createI18n } from 'vue-i18n'
 import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify'
+import VueGtag from 'vue-gtag'
 import { loadFonts } from './plugins/webfontloader'
 
 // Import translations
@@ -22,6 +23,7 @@ const i18n = createI18n({
 loadFonts()
 
 createApp(App)
+.use(VueGtag, {config: {id: "G-Z6ZFDB237H"}}, router)
 .use(router)
 .use(vuetify)
 .use(i18n)
