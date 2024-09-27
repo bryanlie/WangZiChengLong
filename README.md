@@ -64,6 +64,12 @@ We believe in a collaborative approach to education. While we have a growing lib
 - build a backlog for the web app
 - use a domain name to replace the public IP
 
+3. AWS SDK + CloudFormation
+   - deploy your containerized web app from ECR to AWS using CloudFormation, leveraging ECS and Fargate for container orchestration and management.
+   - create a Lambda function using CloudFormation that can access an S3 bucket and a MongoDB database in AWS using boto3
+   - upload multiple images to S3 and store their information in MongoDB using a Lambda function
+
+
 # Eye touch
 https://www.youtube.com/watch?v=Oj_M3N4oPoc&t=158s
 
