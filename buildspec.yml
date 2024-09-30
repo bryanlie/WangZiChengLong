@@ -4,14 +4,30 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin https://public.ecr.aws/r0c3j2a2/vuejsweb/wangzichenglong
+      - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
+      - REPO_URI="public.ecr.aws/r0c3j2a2/vuejsweb/wangzichenglong" 
+      - IMAGE_TAG=latest
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t https://public.ecr.aws/r0c3j2a2/vuejsweb/wangzichenglong:latest .
+      - docker build -t $REPO_URI:$IMAGE_TAG .
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image to ECR...
-      - docker push https://public.ecr.aws/r0c3j2a2/vuejsweb/wangzichenglong:latest
+      - docker push $REPO_URI:$IMAGE_TAG
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
+
+  # Needed by ECS CodePipeline to determine the image to deploy
+  secondary-artifacts:
+    imagedefinitions:
+      files:
+        - imagedefinitions.json
+
+cache:
+  paths:
+    - '/root/.m2/**/*'
