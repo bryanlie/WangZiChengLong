@@ -3,10 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo Logging in to Amazon ECR...
-      - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
-      - REPO_URI="public.ecr.aws/r0c3j2a2/vuejsweb/wangzichenglong" 
-      - IMAGE_TAG=latest
+      - echo "Skipping login as we are using a public ECR repository"      
   build:
     commands:
       - echo Build started on `date`
