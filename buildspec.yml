@@ -6,14 +6,13 @@ phases:
       - echo "Skipping login as we are using a public ECR repository"      
   build:
     commands:
-      - echo Build started on `date`
-      - echo Building the Docker image...
-      - docker build -t $REPO_URI:$IMAGE_TAG .
+      - echo "Building the Docker image..."
+      - docker build -t web-app .
+      - docker tag web-app:latest public.ecr.aws/r0c3j2a2/vuejsweb/wangzichenglong:latest
   post_build:
     commands:
-      - echo Build completed on `date`
-      - echo Pushing the Docker image to ECR...
-      - docker push $REPO_URI:$IMAGE_TAG
+      - echo "Pushing the Docker image to the public ECR repository..."
+      - docker push public.ecr.aws/r0c3j2a2/vuejsweb/wangzichenglong:latest
 artifacts:
   files:
     - '**/*'
