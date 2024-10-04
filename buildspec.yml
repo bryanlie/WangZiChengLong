@@ -14,12 +14,15 @@ phases:
     commands:
       - echo "Pushing the Docker image to the public ECR repository..."
       - docker push public.ecr.aws/r0c3j2a2/vuejsweb/wangzichenglong:latest
+      # Generate the imagedefinitions.json file
+      - echo '[{"name":"app-container","imageUri":"public.ecr.aws/r0c3j2a2/vuejsweb/wangzichenglong:latest"}]' > imagedefinitions.json
       
 artifacts:
   files:
     - '**/*'
+    - imagedefinitions.json  # Ensure the generated image definitions file is included
   discard-paths: yes
-
+  
   # Needed by ECS CodePipeline to determine the image to deploy
   secondary-artifacts:
     imagedefinitions:
