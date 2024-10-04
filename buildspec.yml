@@ -14,4 +14,18 @@ phases:
     commands:
       - echo "Pushing the Docker image to the public ECR repository..."
       - docker push public.ecr.aws/r0c3j2a2/vuejsweb/wangzichenglong:latest
+      
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
 
+  # Needed by ECS CodePipeline to determine the image to deploy
+  secondary-artifacts:
+    imagedefinitions:
+      files:
+        - imagedefinitions.json
+
+cache:
+  paths:
+    - '/root/.m2/**/*'
