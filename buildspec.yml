@@ -3,7 +3,8 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo "Skipping login as we are using a public ECR repository"      
+      - echo "Logging into ECR public repository..."
+      - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/r0c3j2a2
   build:
     commands:
       - echo "Building the Docker image..."
@@ -13,17 +14,4 @@ phases:
     commands:
       - echo "Pushing the Docker image to the public ECR repository..."
       - docker push public.ecr.aws/r0c3j2a2/vuejsweb/wangzichenglong:latest
-artifacts:
-  files:
-    - '**/*'
-  discard-paths: yes
 
-  # Needed by ECS CodePipeline to determine the image to deploy
-  secondary-artifacts:
-    imagedefinitions:
-      files:
-        - imagedefinitions.json
-
-cache:
-  paths:
-    - '/root/.m2/**/*'
