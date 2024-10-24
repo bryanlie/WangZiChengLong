@@ -1,0 +1,25 @@
+Resources:
+  ECSTaskDefinition:
+    Type: "AWS::ECS::TaskDefinition"
+    Properties:
+      Family: "MyWebAppTaskDefinition"
+      Cpu: "256" 
+      Memory: "512" 
+      NetworkMode: "awsvpc"
+      RequiresCompatibilities:
+        - "FARGATE"
+      ExecutionRoleArn: "arn:aws:iam::509399593637:role/ecsTaskExecutionRole"
+      ContainerDefinitions:
+        - Name: "my-web-app-container"
+          Image: "public.ecr.aws/r0c3j2a2/vuejsweb/wangzichenglong:latest" 
+          PortMappings:
+            - ContainerPort: 80 # Adjust to match your container's port
+              Protocol: "tcp"
+          Essential: true
+          MemoryReservation: 256
+          Cpu: 128
+
+Outputs:
+  TaskDefinitionArn:
+    Description: "ECS Task Definition ARN"
+    Value: !Ref ECSTaskDefinition

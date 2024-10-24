@@ -1,0 +1,22 @@
+Resources:
+  ECSService:
+    Type: "AWS::ECS::Service"
+    Properties:
+      Cluster: arn:aws:ecs:us-east-1:509399593637:cluster/ECS-Cluster-ECSCluster-TsoCIEKpFLju  # Replace with your ECS cluster's logical name or ARN
+      TaskDefinition: arn:aws:ecs:us-east-1:509399593637:task-definition/MyWebAppTaskDefinition:1
+      LaunchType: "FARGATE"
+      DesiredCount: 1  # Number of tasks to run
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: "ENABLED"
+          SecurityGroups:
+            - sg-0047e2ada6677208f # Replace with your security group ID
+          Subnets:
+            - subnet-0f8a2bf4512183a16 # Replace with your public subnet ID
+            - subnet-03c767b24057719f3 # Replace with another public subnet ID
+      ServiceName: "MyWebAppService"
+
+Outputs:
+  ECSServiceArn:
+    Description: "ECS Service ARN"
+    Value: !Ref ECSService

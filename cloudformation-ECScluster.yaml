@@ -1,0 +1,9 @@
+Resources:
+  ECSCluster:
+    Type: "AWS::ECS::Cluster"
+    Properties: {}
+
+Outputs:
+  ECSClusterName:
+    Value: !Ref ECSCluster
+    Description: "ECS Cluster Name"
