@@ -55,7 +55,7 @@
                         <v-icon>mdi-chevron-right</v-icon>
                         <v-icon>mdi-numeric-8-circle-outline</v-icon>
                         <v-list-item-content>
-                            <v-list-item-title> AMC 8</v-list-item-title>
+                            <v-list-item-title> {{ $t('nav.amc8') }}</v-list-item-title>
                         </v-list-item-content>
                     </v-list-item-action>
                 </v-list-item>
@@ -99,7 +99,7 @@
                         <v-icon>mdi-chevron-right</v-icon>
                         <v-icon>mdi-language-python</v-icon>
                         <v-list-item-content>
-                            <v-list-item-title> Python </v-list-item-title>
+                            <v-list-item-title> {{ $t('nav.python') }} </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item-action>
                 </v-list-item>

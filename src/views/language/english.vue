@@ -15,28 +15,28 @@
                 <v-row>
                     <v-col cols="12">
                         <div>
-                            <h2>Phonics</h2>
+                            <h2>{{ $t('english.phonics_title') }}</h2>
 
-                            <h3>What is Phonics?</h3>
+                            <h3>{{ $t('english.what_is_phonics_title') }}</h3>
                             <p>
                                 <ul>
-                                    <li>Phonics is the best, most efficient way to teach children how to read.</li>
-                                    <li>Phonics is a method of teaching people to read by correlating sounds with letters or groups of letters in an alphabetic writing system.</li>
-                                    <li>Phonics is a straightforward, methodical way of teaching decoding, the first skill that, with comprehension, goes into effective reading. </li>
+                                    <li>{{ $t('english.what_is_phonics_p1') }}</li>
+                                    <li>{{ $t('english.what_is_phonics_p2') }}</li>
+                                    <li>{{ $t('english.what_is_phonics_p3') }}</li>
                                 </ul>
                             </p>
 
-                            <h3>How to teach phonics?</h3>
+                            <h3>{{ $t('english.how_to_teach_phonics_title') }}</h3>
                             <p>
                                 <ul>
-                                    <li>Start with simple hard consonants and short vowel sounds.</li>
-                                    <li>Introduce blending with simple 3-letter words. e.g. nap, sit, pat.</li>
-                                    <li>Introduce more complex consonant combinations and bump up to 4-letter words. e.g. st, gr, lm, ng, sh.</li>
-                                    <li>Teach vowel combinations — ea, oo, ai — and put them into action. e.g. bear, hair, learn, pear.</li>
+                                    <li>{{ $t('english.how_to_teach_phonics_l1') }}</li>
+                                    <li>{{ $t('english.how_to_teach_phonics_l2') }}</li>
+                                    <li>{{ $t('english.how_to_teach_phonics_l3') }}</li>
+                                    <li>{{ $t('english.how_to_teach_phonics_l4') }}</li>
                                 </ul>
                             </p>
 
-                            <h3>Books with links</h3>
+                            <h3>{{ $t('english.books_with_links_title') }}</h3>
                             <ul style="list-style: none;">
                                         <li class="body-1">
                                             <v-row align="center">
@@ -46,8 +46,8 @@
                                                     </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>This engaging box set includes 12 small books that focus on different phonics sounds. The stories are silly and fun, and the illustrations are colorful and eye-catching. Children will love following Pete the Cat on his adventures as they learn to sound out words.
-                                                    <a href="https://www.amazon.com/Pete-12-Book-Phonics-First-Read-ebook/dp/B08BLM3MTR/ref=tmm_kin_swatch_0?_encoding=UTF8&sr=8-1" target="_blank">Pete the Cat Phonics, Kindle read for Free</a></p>
+                                                    <p>{{ $t('english.pete_the_cat_p') }}
+                                                    <a href="https://www.amazon.com/Pete-12-Book-Phonics-First-Read-ebook/dp/B08BLM3MTR/ref=tmm_kin_swatch_0?_encoding=UTF8&sr=8-1" target="_blank">{{ $t('english.pete_the_cat_kindle') }}</a></p>
                                                 </v-col>
                                             </v-row>
                                         </li>
@@ -59,7 +59,7 @@
                                                     </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>This collection of 12 rhyming stories is a fun way for children to learn about phonics. The stories are short and easy to read, and they focus on different phonics sounds. The book also includes a listen-along CD, which can be helpful for children who are just learning to read.
+                                                    <p>{{ $t('english.fat_cat_mat_p') }}
                                                 </p>
                                                 </v-col>
                                             </v-row>                                
@@ -88,29 +88,28 @@
                 <v-row>
                     <v-col cols="12">
                         <div>
-                            <h2>Reading is fun!</h2>
-                            Through the foundational principles of phonics and phonemic awareness, children are equipped with the essential skills needed to read effectively. 
-                            Encouraging children to engage with age-appropriate literature, further enhances their vocabulary and comprehension abilities, laying a solid groundwork for lifelong literacy.
+                            <h2>{{ $t('english.reading_is_fun_title') }}</h2>
+                            {{ $t('english.reading_is_fun_p') }}
 
-                            <h3>Sight Words</h3>
+                            <h3>{{ $t('english.sight_words_title') }}</h3>
                             <p>
                                 <ul>
-                                    <li><strong>Use flashcards:</strong> Write sight words on cards and practice reading them together.</li>
-                                    <li><strong>Play games:</strong> Make memory games or matching games with sight words.</li>
-                                    <li><strong>Read books with repetitive phrases:</strong> Help them recognize sight words in familiar contexts. </li>
+                                    <li>{{ $t('english.sight_words_l1') }}</li>
+                                    <li>{{ $t('english.sight_words_l2') }}</li>
+                                    <li>{{ $t('english.sight_words_l3') }}</li>
                                 </ul>
                             </p>
 
-                            <h3>Reading Practice</h3>
+                            <h3>{{ $t('english.reading_practice_title') }}</h3>
                             <p>
                                 <ul>
-                                    <li><strong>Read aloud together:</strong> Model fluent reading and point to the words as you go.</li>
-                                    <li><strong>Choose books with engaging illustrations:</strong> Pictures can help with comprehension.</li>
-                                    <li><strong>Reread favorites:</strong> Repetition helps solidify new skills.</li>
+                                    <li>{{ $t('english.reading_practice_l1') }}</li>
+                                    <li>{{ $t('english.reading_practice_l2') }}</li>
+                                    <li>{{ $t('english.reading_practice_l3') }}</li>
                                 </ul>
                             </p>
 
-                            <h3>Books with links</h3>
+                            <h3>{{ $t('english.books_with_links_title') }}</h3>
                             <ul style="list-style: none;">
                                         <li class="body-1">
                                             <v-row align="center">
@@ -145,7 +144,7 @@
                                                     </a>
                                                 </v-col>
                                                 <v-col cols="12" md="10" class="pl-md-2">
-                                                    <p>Dr. Seuss, the pen name of Theodor Geisel, is a beloved children's author famous for his whimsical stories and colorful illustrations. His books often feature quirky characters and imaginative worlds, teaching young readers important life lessons in a fun and engaging way. With catchy rhymes and playful language, Dr. Seuss's works have captured the hearts of children and adults alike for generations. His most iconic characters include The Cat in the Hat, Horton the Elephant, and the Grinch.
+                                                    <p>{{ $t('english.dr_seuss_p') }}
                                                     </p>
                                                 </v-col>
                                             </v-row>
@@ -158,8 +157,8 @@
                                                     </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>This beloved novel tells the story of Wilbur, a pig, and Charlotte, a spider, who become friends. Charlotte hatches a plan to save Wilbur from slaughter.
-                                                    <a href="https://www.amazon.com/Charlottes-Web-E-B-White-audiobook/dp/B0000W6SOK/ref=tmm_aud_swatch_0?_encoding=UTF8&qid=&sr=" target="_blank">Audiobook Free trial</a></p>
+                                                    <p>{{ $t('english.charlotte_web_p') }}
+                                                    <a href="https://www.amazon.com/Charlottes-Web-E-B-White-audiobook/dp/B0000W6SOK/ref=tmm_aud_swatch_0?_encoding=UTF8&qid=&sr=" target="_blank">{{ $t('homepage.audiobook') }}</a></p>
                                                 </v-col>
                                             </v-row>                                
                                         </li>
@@ -186,31 +185,31 @@
                 <v-row>
                     <v-col cols="12">
                         <div>
-                            <h2>Harry Potter</h2>
-                            The Harry Potter series, consists of seven main books written by J.K. Rowling, is fantastic for introducing kids to the magic of fantasy fiction, let us use this series as an example to help kids improve their reading skills.
+                            <h2>{{ $t('english.harry_potter_title') }}</h2>
+                            {{ $t('english.harry_potter_p') }}
 
-                            <h3>Reading Level</h3>
+                            <h3>{{ $t('english.reading_level_title') }}</h3>
                             <p>
                                 <ul>
-                                    <li>The series is generally classified as middle-grade fiction, aimed at readers between 9 and 12 years old.</li>
-                                    <li><strong>Age 6-8:</strong>  You can start reading the books aloud to them, especially the beautifully illustrated versions. This exposes them to the story without the pressure of independent reading.</li>
-                                    <li><strong>Age 8-10:</strong> If your child is a confident reader, they might be ready to tackle the first few books themselves.</li>
-                                    <li><strong>Age 10-12:</strong> By this age, most children should be able to read the series independently.</li>
+                                    <li>{{ $t('english.reading_level_l1') }}</li>
+                                    <li>{{ $t('english.reading_level_l2') }}</li>
+                                    <li>{{ $t('english.reading_level_l3') }}</li>
+                                    <li>{{ $t('english.reading_level_l4') }}</li>
                                 </ul>
                             </p>
 
-                            <h3>Making it Engaging</h3>
+                            <h3>{{ $t('english.making_it_engaging_title') }}</h3>
                             <p>
                                 <ul>
-                                    <li><strong>Read Aloud:</strong> This can create a special bonding experience and help them grasp the story. You can even use different voices for the characters to make it more fun!</li>
-                                    <li><strong>Stop and Discuss:</strong> Pause throughout to ask questions about the plot, characters, or magical world. This helps with comprehension and keeps them engaged.</li>
-                                    <li><strong>Act it Out:</strong> Encourage them to act out scenes or draw pictures of their favorite parts.</li>
-                                    <li><strong>Explore the Wizarding World:</strong> Watch the movies (though they might be a bit scary for younger kids), visit
-                                        <a href="https://www.wizardingworld.com/" target="_blank">the Wizarding World website</a>, or find fun Harry Potter-themed games or activities.</li>
+                                    <li>{{ $t('english.making_it_engaging_l1') }}</li>
+                                    <li>{{ $t('english.making_it_engaging_l2') }}</li>
+                                    <li>{{ $t('english.making_it_engaging_l3') }}</li>
+                                    <li>{{ $t('english.making_it_engaging_l4') }}
+                                        <a href="https://www.wizardingworld.com/" target="_blank">{{ $t('english.wizarding_world_website') }}</a></li>
                                 </ul>
                             </p>
 
-                            <h3>Books with links</h3>
+                            <h3>{{ $t('english.books_with_links_title') }}</h3>
                             <ul style="list-style: none;">
                                         <li class="body-1">
                                             <v-row align="center">
@@ -252,7 +251,7 @@
                                                 </v-col>
 
                                                 <v-col cols="12" md="8" class="pl-md-2">
-                                                    <p>The Harry Potter series is a beloved fantasy series that follows the adventures of a young wizard named Harry Potter. Harry discovers he is a wizard and attends Hogwarts School of Witchcraft and Wizardry, where he learns about magic and confronts the dark wizard Lord Voldemort. The series explores themes of friendship, loyalty, and the power of good over evil. With its rich characters, imaginative world, and thrilling plot, Harry Potter has captivated readers of all ages around the globe.
+                                                    <p>{{ $t('english.harry_potter_series_p') }}
                                                    </p>
                                                 </v-col>
                                             </v-row>

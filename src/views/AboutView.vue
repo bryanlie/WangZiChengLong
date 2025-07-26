@@ -8,22 +8,12 @@
       </v-col>
       <v-col cols="12" md="6">
         <div class="text-center">
-          <h2>Inspiration</h2> 
-          <p>The world around us is changing at an astonishing pace. From self-driving cars to personalized medicine, 
-            advancements in STEM (Science, Technology, Engineering, and Math) and computer science (CS) are shaping the future we live in.  
-            <strong>We believe everyone deserves the opportunity to participate in, and be empowered by, these incredible advancements.</strong>
+          <h2>{{ $t('about.inspiration') }}</h2> 
+          <p>{{ $t('about.inspiration_p1') }}
+            <strong>{{ $t('about.inspiration_p2') }}</strong>
           </p>
           <p>
-            This project was born from a simple idea: <strong>to create a central hub for knowledge and resources.</strong> 
-            We envisioned a space where learners of all ages could explore the fascinating world of Math, CS, 
-            and even languages, at their own pace.
-          </p>
-
-          <p>
-            <strong>The rise of Artificial Intelligence (AI) adds another exciting layer to this journey. </strong>
-            AI holds immense potential to revolutionize various industries and solve some of humanity's most pressing challenges. 
-            By providing accessible resources on STEM and CS, we hope to equip learners with the skills needed to contribute 
-            to this rapidly evolving field.
+            {{ $t('about.inspiration_p3') }}
           </p>
         </div>
       </v-col>
@@ -32,22 +22,22 @@
     <v-row>
       <v-col cols="12" md="6">
         <div class="text-center">
-          <h2>Communication</h2>
-          <p>Please send us your feedback, thank you!</p>
+          <h2>{{ $t('about.communication') }}</h2>
+          <p>{{ $t('about.feedback') }}</p>
           <form @submit.prevent="submitForm">
             <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" id="name" v-model="name" placeholder="Your Name" required>
+              <label for="name">{{ $t('about.name') }}</label>
+              <input type="text" id="name" v-model="name" :placeholder="$t('about.your_name')" required>
             </div>
             <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" id="email" v-model="email" placeholder="Your Email" required>
+              <label for="email">{{ $t('about.email') }}</label>
+              <input type="email" id="email" v-model="email" :placeholder="$t('about.your_email')" required>
             </div>
             <div class="form-group">
-              <label for="message">Message:</label>
-              <textarea id="message" rows="5" v-model="message" placeholder="Leave a Message" required></textarea>
+              <label for="message">{{ $t('about.message') }}</label>
+              <textarea id="message" rows="5" v-model="message" :placeholder="$t('about.leave_message')" required></textarea>
             </div>
-            <button type="submit">Send</button>
+            <button type="submit">{{ $t('about.send') }}</button>
           </form>
 
         </div>
@@ -55,9 +45,8 @@
       <v-col cols="12" md="6">
         <div class="text-center">
           
-          <h2>Donation</h2>
-          <p>  If you would like to support the kids who can benefit from this project, you can donate to us via PayPal or any Debit/Credit card. 
-              We will use the raised money to further improve user experience on this website. Thank you for your support!</p>
+          <h2>{{ $t('about.donation') }}</h2>
+          <p>  {{ $t('about.donation_p') }}</p>
           <PayPalDonateButton />
         </div>
       </v-col>

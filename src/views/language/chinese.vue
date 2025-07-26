@@ -15,43 +15,38 @@
                 <v-row>
                     <v-col cols="12">
                         <div>
-                            <h2>Learn Chinese</h2>
+                            <h2>{{ $t('chinese.title') }}</h2>
 
-                            <h3>Weekend Schools:</h3>
+                            <h3>{{ $t('chinese.weekend_schools_title') }}</h3>
                             <p>
                                 <ul>
-                                    <li>Community Staple: A popular choice, especially within Chinese communities. Weekend schools offer structured learning on weekends, typically covering speaking, reading, writing, and listening.</li>
-                                    <li>According to statistics from the National Association of Chinese Language Schools, the association currently has over 400 member schools in nearly 50 states across the United States, with over 100,000 students.</li>
+                                    <li>{{ $t('chinese.weekend_schools_p1') }}</li>
+                                    <li>{{ $t('chinese.weekend_schools_p2') }}</li>
                                 </ul>
                             </p>
 
-                            <h3>Online Courses</h3>
+                            <h3>{{ $t('chinese.online_courses_title') }}</h3>
                             <p>
                                 <ul>
-                                    <li>LingoAce is an online language learning platform that specializes in teaching Mandarin Chinese to children aged 3-15 years old. 
-                                        LingoAce offers one-on-one online classes with dedicated teachers tailored to each child's unique learning needs and goals.
-                                        <a href="https://r.lingoace.com/iv9GHoP1WvEA" target="_blank">FREE trial class @LingoAce</a></li>
-                                    <li>Yoyo Chinese is an online platform designed to teach Mandarin Chinese, particularly for beginners and intermediate learners.
-                                        The platform uses short video lessons (typically 4-10 minutes long) to explain concepts, pronunciations, and cultural information.
-                                        <a href="https://yoyochinese.com/" target="_blank">Yoyo Chinese</a></li>
-                                    <li>Everyday Chinese is an online platform designed to help people learn Mandarin Chinese. 
-                                        The platform emphasizes teaching "the most authentic Chinese we use every day in China," making it relevant for real-life situations.
-                                        <a href="https://www.everydaychinese.com/" target="_blank">Everyday Chinese</a>
+                                    <li>{{ $t('chinese.lingoace_p') }}
+                                        <a href="https://r.lingoace.com/iv9GHoP1WvEA" target="_blank">{{ $t('chinese.lingoace_link') }}</a></li>
+                                    <li>{{ $t('chinese.yoyo_p') }}
+                                        <a href="https://yoyochinese.com/" target="_blank">{{ $t('chinese.yoyo_link') }}</a></li>
+                                    <li>{{ $t('chinese.everyday_p') }}
+                                        <a href="https://www.everydaychinese.com/" target="_blank">{{ $t('chinese.everyday_link') }}</a>
                                     </li>
                                 </ul>
                             </p>
 
-                            <h3>Official websites</h3>
+                            <h3>{{ $t('chinese.official_websites_title') }}</h3>
                             <p>
                                 <ul>
-                                    <li>The National Primary and Secondary School Smart Education Platform is a comprehensive online learning platform developed by the Ministry of Education of China. 
-                                        It aims to provide high-quality digital educational resources and services to primary and secondary school students across the country.
-                                        The platform offers a vast library of digital learning resources: textbooks, teaching materials, multimedia content, and online courses -- all aligned with the national curriculum.
-                                        <a href="https://basic.smartedu.cn/" target="_blank">Smart Education Platform</a></li>
-                                    <li>The National Digital Library of China is a treasure trove of Chinese cultural heritage. Established in 2002, it offers online access to millions of digital items including books, historical documents, multimedia resources, and more. The NDLC serves as a valuable resource for scholars, students, and anyone interested in exploring Chinese culture.
-                                        <a href="https://www.nlc.cn/web/index.shtml" target="_blank">NDLC</a></li>
-                                    <li>China Documentary Network is a treasure trove of Chinese documentaries. Launched in 2009, it offers a vast online library of over 10,000 documentaries for streaming or download. Explore history, culture, nature, and more through these captivating films. Whether you're a documentary buff or simply curious about China, CDN has something for you.
-                                        <a href="http://www.docuchina.cn/" target="_blank">China Documentary Network</a>
+                                    <li>{{ $t('chinese.smart_education_p') }}
+                                        <a href="https://basic.smartedu.cn/" target="_blank">{{ $t('chinese.smart_education_link') }}</a></li>
+                                    <li>{{ $t('chinese.ndlc_p') }}
+                                        <a href="https://www.nlc.cn/web/index.shtml" target="_blank">{{ $t('chinese.ndlc_link') }}</a></li>
+                                    <li>{{ $t('chinese.docuchina_p') }}
+                                        <a href="http://www.docuchina.cn/" target="_blank">{{ $t('chinese.docuchina_link') }}</a>
                                     </li>
                                 </ul>
                             </p>
@@ -62,7 +57,7 @@
                                 </v-col>
                             </v-row>
 
-                            <h3>The Four Chinese Classic Novels</h3>
+                            <h3>{{ $t('chinese.four_classics_title') }}</h3>
                             <p>
                                 <ul style="list-style: none;">
                                     <li class="body-1">
@@ -88,7 +83,7 @@
                                                 </a>
                                             </v-col>
                                             <v-col cols="12" md="10" class="pl-md-2">
-                                                <p>Journey to the West is a classic Chinese novel that follows the journey of a monk and his disciples as they travel to the West to retrieve sacred scriptures. The central figure is Sun Wukong, the Monkey King, a powerful and mischievous deity with incredible abilities. Along the way, they face a myriad of challenges, encountering a colorful cast of characters and learning valuable lessons about morality, perseverance, and faith. Journey to the West is not only a thrilling adventure story but also a profound exploration of Chinese culture, philosophy, and religion.
+                                                <p>{{ $t('chinese.journey_to_the_west_p') }}
                                                 </p>
                                             </v-col>
                                         </v-row>
@@ -113,7 +108,7 @@
                                             </v-col>
             
                                             <v-col cols="12" md="10" class="pl-md-2">
-                                                <p>Dream of the Red Chamber is a complex and poignant Chinese novel that explores themes of love, loss, and the decline of a wealthy family. The story follows Jia Baoyu, a young man who finds himself caught between the demands of his family and his own desires. Through intricate plotlines and psychologically rich characters, the novel delves into the complexities of human relationships, the fleeting nature of happiness, and the inevitable passage of time.
+                                                <p>{{ $t('chinese.dream_of_red_chamber_p') }}
                                                 </p>
                                             </v-col>
                                         </v-row>
@@ -126,7 +121,7 @@
                                                 </a>
                                             </v-col>
                                             <v-col cols="12" md="8" class="pl-md-2">
-                                                <p>Romance of the Three Kingdoms is an epic Chinese historical novel that chronicles the turbulent years of the late Han dynasty and the subsequent Three Kingdoms period (220-280 AD). Based on the real-life events and figures of this era, the novel offers a captivating blend of history, fiction, and moral philosophy. The story revolves around three primary figures: Liu Bei, a righteous and benevolent leader; Cao Cao, a cunning and ambitious strategist; and Sun Quan, a young and ambitious warlord. The novel explores themes of power, loyalty, and betrayal, while offering insights into Chinese culture and philosophy.
+                                                <p>{{ $t('chinese.romance_of_three_kingdoms_p') }}
                                                 </p>
                                             </v-col>
                                         </v-row>
@@ -139,7 +134,7 @@
                                                 </a>
                                             </v-col>
                                             <v-col cols="12" md="8" class="pl-md-2">
-                                                <p>Water Margin is an epic Chinese novel that tells the story of a group of outlaws who gather together at Liangshan Marsh to rebel against the corrupt government of the Northern Song dynasty. The novel is renowned for its vivid characters, each with unique personalities and skills. From the righteous Song Jiang to the cunning Wu Song, the outlaws' adventures are filled with exciting action sequences, daring escapes, and moral dilemmas. Water Margin offers a fascinating exploration of Chinese society, morality, and the complexities of human nature.
+                                                <p>{{ $t('chinese.water_margin_p') }}
                                                 </p>
                                             </v-col>
                                         </v-row>

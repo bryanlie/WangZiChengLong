@@ -15,27 +15,27 @@
                 <v-row>
                     <v-col cols="12">
                         <div>
-                            <h2>Python programming</h2>
+                            <h2>{{ $t('python.title') }}</h2>
 
-                            <h3>Why learn python?</h3>
+                            <h3>{{ $t('python.why_learn_title') }}</h3>
                             <p>
                                 <ul>
-                                    <li><strong>Easy to Learn:</strong> Python's clear and readable syntax makes it beginner-friendly. Compared to other languages with complex structures, Python reads closer to natural language, making it easier to grasp the fundamentals.</li>
-                                    <li><strong>Versatile:</strong> Python has a wide range of applications. Whether you're interested in web development, data science, automation, or scientific computing, Python has libraries and frameworks to support your goals.  This makes it a valuable skill for many different career paths.</li>
-                                    <li><strong>In-Demand:</strong> Python is a highly sought-after skill in the job market.  Having Python expertise can open doors to exciting career opportunities. With its increasing popularity, Python proficiency is a valuable asset for programmers.</li>
+                                    <li><strong>{{ $t('python.easy_to_learn_title') }}:</strong> {{ $t('python.easy_to_learn_p') }}</li>
+                                    <li><strong>{{ $t('python.versatile_title') }}:</strong> {{ $t('python.versatile_p') }}</li>
+                                    <li><strong>{{ $t('python.in_demand_title') }}:</strong> {{ $t('python.in_demand_p') }}</li>
                                 </ul>
                             </p>
 
-                            <h3>Popular paths</h3>
+                            <h3>{{ $t('python.popular_paths_title') }}</h3>
                             <p>
                                 <ul>
-                                    <li><strong>Web Development:</strong> If you enjoy creating interactive web applications, Python with its web development frameworks like Django and Flask, is a perfect path. You'll build user interfaces, connect to databases, and craft dynamic web experiences.</li>
-                                    <li><strong>Data Science and Machine Learning:</strong> Python reigns supreme in data analysis. Libraries like Pandas, NumPy, and Matplotlib empower you to manipulate, visualize, and extract insights from data.  As you progress, delve into Machine Learning with Scikit-learn and TensorFlow to build intelligent systems that can learn and make predictions.</li>
-                                    <li><strong>Automation:</strong> Python excels at automating repetitive tasks, saving you time and effort. With libraries like Selenium and PyAutoGUI, you can automate web browsing, interact with desktop applications, and boost your productivity in various aspects of your work.</li>
+                                    <li><strong>{{ $t('python.web_dev_title') }}:</strong> {{ $t('python.web_dev_p') }}</li>
+                                    <li><strong>{{ $t('python.data_science_title') }}:</strong> {{ $t('python.data_science_p') }}</li>
+                                    <li><strong>{{ $t('python.automation_title') }}:</strong> {{ $t('python.automation_p') }}</li>
                                 </ul>
                             </p>
 
-                            <h3>Books with links</h3>
+                            <h3>{{ $t('python.books_with_links_title') }}</h3>
                             <ul style="list-style: none;">
                                         <li class="body-1">
                                             <v-row align="center">
@@ -45,7 +45,7 @@
                                                     </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>Python Crash Course, 3rd Edition is a beginner-friendly guide to learning Python programming. It's designed to teach you the basics of Python through hands-on projects, making it easier to understand and apply the concepts. The book covers essential topics like variables, data types, control flow, functions, and object-oriented programming. With its clear explanations and practical examples, this book is a great starting point for anyone interested in learning Python.
+                                                    <p>{{ $t('python.python_crash_course_p') }}
                                                     </p>
                                                 </v-col>
                                             </v-row>
@@ -58,7 +58,7 @@
                                                     </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>Automate the Boring Stuff with Python, 2nd Edition is a practical guide to learning Python programming. It focuses on using Python to automate repetitive tasks, making your work more efficient and enjoyable. The book covers a wide range of topics, from basic Python syntax to advanced concepts like regular expressions and web scraping. With clear explanations, hands-on exercises, and real-world examples, this book is ideal for beginners and experienced programmers alike who want to harness the power of Python for automation.
+                                                    <p>{{ $t('python.automate_boring_stuff_p') }}
                                                     </p>
                                                 </v-col>
                                             </v-row>                                
@@ -71,7 +71,7 @@
                                                     </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>Fluent Python, 2nd Edition is a comprehensive guide to mastering the Python programming language. It delves deep into Python's core features, idioms, and best practices, helping you write efficient, expressive, and idiomatic code. The book covers topics such as data structures, functions, object-oriented programming, control flow, and more. Whether you're a seasoned Python developer or new to the language, this book will equip you with the knowledge to write elegant and effective Python code.
+                                                    <p>{{ $t('python.fluent_python_p') }}
                                                     </p>
                                                 </v-col>
                                             </v-row>                                
@@ -100,30 +100,30 @@
                 <v-row>
                     <v-col cols="12">
                         <div>
-                            <h2>Machine Learning & Deep Learning</h2>
+                            <h2>{{ $t('python.ml_dl_title') }}</h2>
 
-                            <h3>What is Machine Learning?</h3>
-                            Machine learning (ML) is a branch of artificial intelligence (AI) that focuses on developing algorithms that can learn from data without being explicitly programmed.
+                            <h3>{{ $t('python.what_is_ml_title') }}</h3>
+                            {{ $t('python.what_is_ml_p') }}
                             <p>
                                 <ul>
-                                    <li><strong>Learning from Data:</strong> Unlike traditional programming where you define every step for the computer, machine learning algorithms can learn from patterns in data. This data can be anything from numbers and text to images and videos. The more data the algorithm is exposed to, the better it becomes at identifying patterns and making predictions.</li>
-                                    <li><strong>Improving Over Time:</strong> As machine learning algorithms process more data, they improve their performance on a specific task. This is because they can adapt their internal models to better represent the underlying patterns in the data.</li>
-                                    <li><strong>Predictions and Decisions:</strong> The ultimate goal of machine learning is to use the learned patterns to make predictions or decisions on new, unseen data. For example, a machine learning algorithm can be trained to identify spam emails, recommend products to customers, or recognize faces in images.</li>
+                                    <li><strong>{{ $t('python.learning_from_data_title') }}:</strong> {{ $t('python.learning_from_data_p') }}</li>
+                                    <li><strong>{{ $t('python.improving_over_time_title') }}:</strong> {{ $t('python.improving_over_time_p') }}</li>
+                                    <li><strong>{{ $t('python.predictions_decisions_title') }}:</strong> {{ $t('python.predictions_decisions_p') }}</li>
                                 </ul>
                             </p>
 
-                            <h3>What is Deep Learning?</h3>
-                            Deep learning, a powerful subfield of machine learning, leverages artificial neural networks to solve complex problems. These neural networks are inspired by the structure and function of the human brain.
+                            <h3>{{ $t('python.what_is_dl_title') }}</h3>
+                            {{ $t('python.what_is_dl_p') }}
                             <p>
                                 <ul>
-                                    <li><strong>Artificial Neural Networks:</strong> Inspired by the human brain, deep learning uses artificial neural networks with multiple layers. These layers are interconnected, allowing the network to learn intricate relationships within data.</li>
-                                    <li><strong>Learning Through Hierarchies:</strong> Deep learning models process information through these layered networks. Each layer learns a specific level of representation from the data, building progressively complex concepts from simpler ones. Imagine recognizing an animal: the initial layers might detect edges and shapes, while later layers recognize specific features like paws or fur, ultimately classifying the entire image.</li>
-                                    <li><strong>Handling Large amounts of Data:</strong> Deep learning excels at handling massive datasets. The complex architecture and ability to learn from vast amounts of data allow deep learning models to identify subtle patterns and make accurate predictions on unseen data.</li>
-                                    <li><strong>Widespread Applications:</strong> Deep learning's capabilities power a wide range of applications. It's used in image recognition (facial recognition in photos), speech recognition (voice assistants like Siri), natural language processing (machine translation), and many more. As deep learning continues to evolve, it's expected to play an even greater role in shaping the future of technology.</li>
+                                    <li><strong>{{ $t('python.ann_title') }}:</strong> {{ $t('python.ann_p') }}</li>
+                                    <li><strong>{{ $t('python.learning_through_hierarchies_title') }}:</strong> {{ $t('python.learning_through_hierarchies_p') }}</li>
+                                    <li><strong>{{ $t('python.handling_large_data_title') }}:</strong> {{ $t('python.handling_large_data_p') }}</li>
+                                    <li><strong>{{ $t('python.widespread_apps_title') }}:</strong> {{ $t('python.widespread_apps_p') }}</li>
                                 </ul>
                             </p>
 
-                            <h3>Books with links</h3>
+                            <h3>{{ $t('python.books_with_links_title') }}</h3>
                             <ul style="list-style: none;">
                                         <li class="body-1">
                                             <v-row align="center">
@@ -133,7 +133,7 @@
                                                     </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow is a practical guide to building intelligent systems. It uses real-world examples and minimal theory to teach readers how to apply machine learning concepts to various tasks. The book covers a wide range of techniques, from classic algorithms to deep learning, using popular Python libraries like Scikit-Learn, Keras, and TensorFlow. It's a great resource for anyone interested in learning machine learning and applying it to solve real-world problems.
+                                                    <p>{{ $t('python.hands_on_ml_p') }}
                                                     </p>
                                                 </v-col>
                                             </v-row>
@@ -146,7 +146,7 @@
                                                     </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>Deep Learning with Python is a comprehensive guide to the field of deep learning, written by the creator of the Keras library, François Chollet. The book provides a clear and accessible introduction to the concepts and techniques of deep learning, using Python and Keras as the primary tools. Through practical examples and intuitive explanations, readers will learn how to build and train deep learning models for various applications, such as image recognition, natural language processing, and generative modeling.
+                                                    <p>{{ $t('python.dl_with_python_p') }}
                                                     </p>
                                                 </v-col>
                                             </v-row>                                
@@ -159,7 +159,7 @@
                                                     </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>This comprehensive textbook covers the foundations of deep learning, including neural networks, optimization algorithms, and learning theory. It's a great resource for those who want a deep understanding of the theoretical underpinnings of deep learning.
+                                                    <p>{{ $t('python.deep_learning_book_p') }}
                                                     </p>
                                                 </v-col>
                                             </v-row>                                
@@ -188,33 +188,32 @@
                 <v-row>
                     <v-col cols="12">
                         <div>
-                            <h2>Generative AI & Large Language Models</h2>
+                            <h2>{{ $t('python.gen_ai_llm_title') }}</h2>
 
-                            <h3>What is Generative AI?</h3>
-                            Generative AI is a revolutionary branch of artificial intelligence that focuses on creating new content, rather than simply analyzing or categorizing existing data.                     
+                            <h3>{{ $t('python.what_is_gen_ai_title') }}</h3>
+                            {{ $t('python.what_is_gen_ai_p') }}
                             <p>
                                 <ul>
-                                    <li><strong>Creative Potential:</strong> Generative AI can produce a wide array of content types, including images, music, videos, and even 3D models, expanding beyond text generation.</li>
-                                    <li><strong>Multi-modal Capabilities:</strong> These systems can work across different forms of media, often combining various inputs to create novel outputs.</li>
-                                    <li><strong>Adaptive Learning:</strong> Generative AI models can continually improve and adapt their outputs based on feedback and new data, leading to increasingly sophisticated results.</li>
-                                    <li><strong>Transformative Impact:</strong> This technology is reshaping industries by automating creative processes, enhancing product design, and enabling personalized content creation at scale.</li>
+                                    <li><strong>{{ $t('python.creative_potential_title') }}:</strong> {{ $t('python.creative_potential_p') }}</li>
+                                    <li><strong>{{ $t('python.multi_modal_title') }}:</strong> {{ $t('python.multi_modal_p') }}</li>
+                                    <li><strong>{{ $t('python.adaptive_learning_title') }}:</strong> {{ $t('python.adaptive_learning_p') }}</li>
+                                    <li><strong>{{ $t('python.transformative_impact_title') }}:</strong> {{ $t('python.transformative_impact_p') }}</li>
                                 </ul>
                             </p>
 
-                            <h3>Introduction to Large Language Models (LLMs)</h3>
-                            Large Language Models (LLMs) are a specific type of generative AI that excels at understanding and generating human-like text.
-                            Large Language Models (LLMs) are advanced AI systems designed to understand and generate human language. 
-                            They utilize deep learning techniques and are trained on extensive datasets to perform a variety of language-related tasks.                    
+                            <h3>{{ $t('python.intro_llm_title') }}</h3>
+                            {{ $t('python.intro_llm_p1') }}
+                            {{ $t('python.intro_llm_p2') }}
                             <p>
                                 <ul>
-                                    <li><strong>Transformer Architecture:</strong> LLMs are built on transformer models, which enable efficient processing of language through self-attention mechanisms.</li>
-                                    <li><strong>Extensive Training Data:</strong> They are trained on vast amounts of text data, allowing them to learn complex language patterns and context. </li>
-                                    <li><strong>Wide Applications:</strong> LLMs are used in various fields, including natural language processing, customer service, healthcare, and software development.</li>
-                                    <li><strong>High Parameter Count:</strong> These models contain millions or even billions of parameters, which help them generate coherent and contextually relevant text.</li>
+                                    <li><strong>{{ $t('python.transformer_arch_title') }}:</strong> {{ $t('python.transformer_arch_p') }}</li>
+                                    <li><strong>{{ $t('python.extensive_training_data_title') }}:</strong> {{ $t('python.extensive_training_data_p') }}</li>
+                                    <li><strong>{{ $t('python.wide_apps_title') }}:</strong> {{ $t('python.wide_apps_p') }}</li>
+                                    <li><strong>{{ $t('python.high_param_count_title') }}:</strong> {{ $t('python.high_param_count_p') }}</li>
                                 </ul>
                             </p>
 
-                            <h3>Books with links</h3>
+                            <h3>{{ $t('python.books_with_links_title') }}</h3>
                             <ul style="list-style: none;">
                                         <li class="body-1">
                                             <v-row align="center">
@@ -224,7 +223,7 @@
                                                     </a>
                                                 </v-col>
                                                 <v-col cols="12" md="6" class="pl-md-2">
-                                                    <p>Generative Deep Learning: Teaching Machines to Paint, Write, Compose, and Play (2nd Edition) is a comprehensive guide to the exciting field of generative deep learning. This book explores how artificial intelligence can be used to create new and original content, such as art, music, and text. With clear explanations and practical examples, the author guides readers through the process of building and training generative models using TensorFlow and Keras. Whether you're a seasoned machine learning engineer or just starting out, this book provides valuable insights into the cutting-edge world of generative AI.
+                                                    <p>{{ $t('python.gen_dl_book_p') }}
                                                     </p>
                                                 </v-col>
                                             </v-row>

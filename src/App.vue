@@ -12,11 +12,15 @@ export default {
   name: 'App',
   data() {
     return {
-      customTitle: 'Wang Zi Cheng Long'
     };
   },
   mounted() {
-    document.title = this.customTitle;
+    document.title = this.$t('nav.site_title');
+  },
+  watch: {
+    '$i18n.locale': function() {
+      document.title = this.$t('nav.site_title');
+    }
   }
 }
 </script>
