@@ -66,18 +66,54 @@
     <v-container>
         <v-row>
             <v-col cols="12">
+                <h2 class="display-1">{{ $t('amc8.prep_tips_title') }}</h2>
                 <v-container>
                     <v-row>
+                        <v-container>
+                            <v-row>
+                                <v-col cols="12">
+                                    <h3 class="display-2">{{ $t('amc8.aops_prealgebra_title') }}</h3>
+                                    <v-col cols="12" md="2" class="pr-md-2">
+                                            <a href="https://www.amazon.com/Prealgebra-Richard-Rusczyk/dp/1934124214" target="_blank">
+                                                <v-img src="../../assets/aopsPrealg.jpg" contain height="300"/>
+                                            </a>
+                                    </v-col>
+                                    <p class="body-1">{{ $t('amc8.aops_prealgebra_p') }}</p>
+                                    <ul>
+                                        <li class="body-1" v-for="(topic, index) in $tm('amc8.aops_prealgebra_topics')" :key="index">{{ topic }}</li>
+                                    </ul>
+                                </v-col>
+                            </v-row>
+                        </v-container>
+                    </v-row>
+
+                    <v-row>
+                            <v-container>
+                                <v-row>
+                                    <v-col cols="12">
+                                        <h3 class="display-2">{{ $t('amc8.mastering_amc8_title') }}</h3>
+                                        <v-col cols="12" md="2" class="pr-md-2">
+                                            <a href="https://www.omegalearn.org/mastering-amc8" target="_blank">
+                                                <v-img src="../../assets/mastering_amc8.png" contain height="300"/>
+                                            </a>
+                                        </v-col>
+                                        <p class="body-1">{{ $t('amc8.mastering_amc8_p') }}</p>
+                                        <ul>
+                                            <li class="body-1" v-for="(topic, index) in $tm('amc8.mastering_amc8_topics')" :key="index">{{ topic }}</li>
+                                        </ul>
+                                        <br>
+                                        <p class="body-1">{{ $t('amc8.mastering_amc8_complement_p') }}</p>
+                                    </v-col>
+                                </v-row>
+                            </v-container>
+                    </v-row>
+
+                    <v-row>
                         <v-col cols="12">
-                            <h2 class="display-1">{{ $t('amc8.prep_tips_title') }}</h2>
-                            <ul>
-                                <li class="body-1">
-                                    {{ $t('amc8.official_prep_p') }} <a href="https://maa.org/student-programs/amc/" target="_blank">MAA AMC</a>
-                                </li>
-                                <li class="body-1">
-                                    {{ $t('amc8.aops_prep_p') }} <a href="https://artofproblemsolving.com/wiki/index.php/AMC_8_Problems_and_Solutions" target="_blank">{{ $t('amc8.aops_prep_link') }}</a>
-                                </li>
-                            </ul>
+                            
+                            {{ $t('amc8.official_prep_p') }} <a href="https://maa.org/student-programs/amc/" target="_blank">MAA AMC</a>
+                            <br>   
+                            {{ $t('amc8.aops_prep_p') }} <a href="https://artofproblemsolving.com/wiki/index.php/AMC_8_Problems_and_Solutions" target="_blank">{{ $t('amc8.aops_prep_link') }}</a>
                         </v-col>
                     </v-row>
                 </v-container>
@@ -121,8 +157,7 @@
                                             </a>
                                         </v-col>
                                         <v-col cols="12" md="10" class="pl-md-2">
-                                            <p>{{ $t('amc8.aops_series_p') }}
-                                            </p>
+                                            <p>{{ $t('amc8.aops_series_p') }}</p>
                                         </v-col>
                                     </v-row>
                                 </li>
