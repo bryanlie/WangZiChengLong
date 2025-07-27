@@ -54,3 +54,15 @@ The escaped quotes issue has been resolved, and the i18n configuration has been 
 ## Recommendation
 
 The primary issue (escaped quotes causing JavaScript parsing errors) has been fixed. If the problem persists, it may require additional debugging of the specific JavaScript error that occurs during English locale rendering, but the foundation is now solid and the most likely cause has been addressed.
+
+--- 
+
+The issue is not that "only Chinese version renders correctly" - it's that the dynamically imported language pages (English and Chinese) fail to display content when the current i18n locale doesn't match the page's expected language.
+
+Here's what I observed:
+
+English page works when language is set to English
+Chinese page works when language is set to Chinese
+But when language is set to English and you visit Chinese page → no content + JS errors
+When language is set to Chinese and you visit English page → no content + JS errors
+This is a classic code splitting + i18n issue where the dynamically imported chunks don't have access to the correct translation keys.
