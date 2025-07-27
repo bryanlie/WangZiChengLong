@@ -80,6 +80,11 @@
                         <a href="http://www.usaco.org/" target="_blank">{{ $t('compute.usaco_link') }}</a>
                     </p>
 
+                    <p><strong>{{ $t('compute.ioi') }}</strong>
+                        {{ $t('compute.ioi_p') }}
+                        <a href="https://ioinformatics.org/" target="_blank">{{ $t('compute.ioi_link') }}</a>
+                    </p>
+
                     <p><strong>{{ $t('compute.acsl') }}</strong>
                         {{ $t('compute.acsl_p') }}
                         <a href="https://www.acsl.org/" target="_blank">{{ $t('compute.acsl_link') }}</a>
