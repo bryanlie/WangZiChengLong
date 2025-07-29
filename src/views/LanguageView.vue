@@ -13,25 +13,25 @@
 
                 <v-row>
                     <v-col cols="12">
-                        <h2>{{ $t('language_view.english_education_title') }}</h2>
+                        <h2>{{ $t('language.english_education_title') }}</h2>
                         
-                        <h3>{{ $t('language_view.philosophy_title') }}</h3>
+                        <h3>{{ $t('language.philosophy_title') }}</h3>
                             <ul>
-                                <li><b><i>{{ $t('language_view.literacy_communication_title') }}</i></b> {{ $t('language_view.literacy_communication_desc') }}</li>
-                                <li><b><i>{{ $t('language_view.critical_thinking_title') }}</i></b> {{ $t('language_view.critical_thinking_desc') }}</li>
-                                <li><b><i>{{ $t('language_view.cultural_awareness_title') }}</i></b> {{ $t('language_view.cultural_awareness_desc') }}</li>
-                                <li><b><i>{{ $t('language_view.college_career_readiness_title') }}</i></b>  {{ $t('language_view.college_career_readiness_desc') }}</li>
+                                <li><b><i>{{ $t('language.literacy_communication_title') }}</i></b> {{ $t('language.literacy_communication_desc') }}</li>
+                                <li><b><i>{{ $t('language.critical_thinking_title') }}</i></b> {{ $t('language.critical_thinking_desc') }}</li>
+                                <li><b><i>{{ $t('language.cultural_awareness_title') }}</i></b> {{ $t('language.cultural_awareness_desc') }}</li>
+                                <li><b><i>{{ $t('language.college_career_readiness_title') }}</i></b>  {{ $t('language.college_career_readiness_desc') }}</li>
                             </ul>
                         <br>
-                        <h3>{{ $t('language_view.methodology_title') }}</h3>
+                        <h3>{{ $t('language.methodology_title') }}</h3>
                             <ul>
-                                <li><b><i>{{ $t('language_view.balanced_literacy_title') }}</i></b> {{ $t('language_view.balanced_literacy_desc') }}</li>
-                                <li><b><i>{{ $t('language_view.close_reading_title') }}</i></b>  {{ $t('language_view.close_reading_desc') }}</li>
-                                <li><b><i>{{ $t('language_view.differentiated_instruction_title') }}</i></b>  {{ $t('language_view.differentiated_instruction_desc') }}</li>
-                                <li><b><i>{{ $t('language_view.student_centered_learning_title') }}</i></b>  {{ $t('language_view.student_centered_learning_desc') }}</li>
+                                <li><b><i>{{ $t('language.balanced_literacy_title') }}</i></b> {{ $t('language.balanced_literacy_desc') }}</li>
+                                <li><b><i>{{ $t('language.close_reading_title') }}</i></b>  {{ $t('language.close_reading_desc') }}</li>
+                                <li><b><i>{{ $t('language.differentiated_instruction_title') }}</i></b>  {{ $t('language.differentiated_instruction_desc') }}</li>
+                                <li><b><i>{{ $t('language.student_centered_learning_title') }}</i></b>  {{ $t('language.student_centered_learning_desc') }}</li>
                             </ul>
                         <br>
-                        {{ $t('language_view.more_details_english_link') }} <router-link :to="'/language/english'">{{ $t('nav.english') }}</router-link>
+                        {{ $t('language.more_details_english_link') }} <router-link :to="'/language/english'">{{ $t('nav.english') }}</router-link>
                         
                     </v-col>
                 </v-row>
@@ -52,30 +52,30 @@
 
                 <v-row>
                     <v-col cols="12">
-                        <h2>{{ $t('language_view.chinese_learning_title') }}</h2>
+                        <h2>{{ $t('language.chinese_learning_title') }}</h2>
                         
-                        <h3>{{ $t('language_view.solid_foundation_title') }}</h3>
+                        <h3>{{ $t('language.solid_foundation_title') }}</h3>
                             <ul>
-                                <li><b><i>{{ $t('language_view.mastering_basic_literacy_title') }}</i></b> {{ $t('language_view.mastering_basic_literacy_desc') }}</li>
-                                <li><b><i>{{ $t('language_view.oral_aural_skills_title') }}</i></b> {{ $t('language_view.oral_aural_skills_desc') }}</li>
-                                <li><b><i>{{ $t('language_view.grammar_syntax_title') }}</i></b> {{ $t('language_view.grammar_syntax_desc') }}</li>
+                                <li><b><i>{{ $t('language.mastering_basic_literacy_title') }}</i></b> {{ $t('language.mastering_basic_literacy_desc') }}</li>
+                                <li><b><i>{{ $t('language.oral_aural_skills_title') }}</i></b> {{ $t('language.oral_aural_skills_desc') }}</li>
+                                <li><b><i>{{ $t('language.grammar_syntax_title') }}</i></b> {{ $t('language.grammar_syntax_desc') }}</li>
                             </ul>
                             <br>
-                            <h3>{{ $t('language_view.cultural_appreciation_title') }}</h3>
+                            <h3>{{ $t('language.cultural_appreciation_title') }}</h3>
                             <ul>
-                                <li><b><i>{{ $t('language_view.exploring_chinese_literature_title') }}</i></b> {{ $t('language_view.exploring_chinese_literature_desc') }}</li>
-                                <li><b><i>{{ $t('language_view.understanding_chinese_customs_title') }}</i></b> {{ $t('language_view.understanding_chinese_customs_desc') }}</li>
-                                <li><b><i>{{ $t('language_view.intercultural_communication_title') }}</i></b> {{ $t('language_view.intercultural_communication_desc') }}</li>
+                                <li><b><i>{{ $t('language.exploring_chinese_literature_title') }}</i></b> {{ $t('language.exploring_chinese_literature_desc') }}</li>
+                                <li><b><i>{{ $t('language.understanding_chinese_customs_title') }}</i></b> {{ $t('language.understanding_chinese_customs_desc') }}</li>
+                                <li><b><i>{{ $t('language.intercultural_communication_title') }}</i></b> {{ $t('language.intercultural_communication_desc') }}</li>
                             </ul>
                             <br>
-                            <h3>{{ $t('language_view.fostering_critical_thinking_title') }}</h3>
+                            <h3>{{ $t('language.fostering_critical_thinking_title') }}</h3>
                             <ul>
-                                <li><b><i>{{ $t('language_view.analyzing_texts_title') }}</i></b> {{ $t('language_view.analyzing_texts_desc') }}</li>
-                                <li><b><i>{{ $t('language_view.expressing_ideas_title') }}</i></b> {{ $t('language_view.expressing_ideas_desc') }}</li>
-                                <li><b><i>{{ $t('language_view.creative_language_use_title') }}</i></b> {{ $t('language_view.creative_language_use_desc') }}</li>
+                                <li><b><i>{{ $t('language.analyzing_texts_title') }}</i></b> {{ $t('language.analyzing_texts_desc') }}</li>
+                                <li><b><i>{{ $t('language.expressing_ideas_title') }}</i></b> {{ $t('language.expressing_ideas_desc') }}</li>
+                                <li><b><i>{{ $t('language.creative_language_use_title') }}</i></b> {{ $t('language.creative_language_use_desc') }}</li>
                             </ul>
                         <br>
-                        {{ $t('language_view.more_details_chinese_link') }} <router-link :to="'/language/chinese'">{{ $t('nav.chinese') }}</router-link>
+                        {{ $t('language.more_details_chinese_link') }} <router-link :to="'/language/chinese'">{{ $t('nav.chinese') }}</router-link>
 
                     </v-col>
                 </v-row>

@@ -75,7 +75,7 @@
                                     <h3 class="display-2">{{ $t('amc8.aops_prealgebra_title') }}</h3>
                                     <v-col cols="12" md="2" class="pr-md-2">
                                             <a href="https://www.amazon.com/Prealgebra-Richard-Rusczyk/dp/1934124214" target="_blank">
-                                                <v-img src="../../assets/aopsPrealg.jpg" contain height="300"/>
+                                                <v-img src="../../assets/aopsPrealg.jpg" contain height="200"/>
                                             </a>
                                     </v-col>
                                     <p class="body-1">{{ $t('amc8.aops_prealgebra_p') }}</p>
@@ -94,7 +94,7 @@
                                         <h3 class="display-2">{{ $t('amc8.mastering_amc8_title') }}</h3>
                                         <v-col cols="12" md="2" class="pr-md-2">
                                             <a href="https://www.omegalearn.org/mastering-amc8" target="_blank">
-                                                <v-img src="../../assets/mastering_amc8.png" contain height="300"/>
+                                                <v-img src="../../assets/mastering_amc8.png" contain height="200"/>
                                             </a>
                                         </v-col>
                                         <p class="body-1">{{ $t('amc8.mastering_amc8_p') }}</p>
@@ -129,38 +129,6 @@
                         <v-col cols="12">
                             <h2 class="display-1">{{ $t('amc8.books_with_links_title') }}</h2>
                             <ul style="list-style: none;">
-                                <li class="body-1">
-                                    <v-row align="center">
-                                        <v-col cols="12" md="2" class="pr-md-2">
-                                            <a href="https://www.amazon.com/Prealgebra-Richard-Rusczyk/dp/1934124214" target="_blank">
-                                                <v-img src="../../assets/aopsPrealg.jpg" contain height="300"/>
-                                            </a>
-                                        </v-col>
-                                        <v-col cols="12" md="2" class="pr-md-2">
-                                            <a href="https://www.amazon.com/Problem-Solving-Introduction-Textbook-Solutions/dp/B00NFSNIJE" target="_blank">
-                                                <v-img src="../../assets/aopsAlg.jpg" contain height="300"/>
-                                            </a>
-                                        </v-col>
-                                        <v-col cols="12" md="2" class="pr-md-2">
-                                            <a href="https://www.amazon.com/Introduction-Counting-Probability-David-Patrick/dp/0977304507/ref=sr_1_4" target="_blank">
-                                                <v-img src="../../assets/aopsProp.jpg" contain height="300"/>
-                                            </a>
-                                        </v-col>
-                                        <v-col cols="12" md="2" class="pr-md-2">
-                                            <a href="https://www.amazon.com/Introduction-Number-Theory-Problem-Solving/dp/1934124125/ref=sr_1_1" target="_blank">
-                                                <v-img src="../../assets/aopsNumb.jpg" contain height="300"/>
-                                            </a>
-                                        </v-col>
-                                        <v-col cols="12" md="2" class="pr-md-2">
-                                            <a href="https://www.amazon.com/Introduction-Geometry-2nd-Problem-Solving/dp/1934124087" target="_blank">
-                                                <v-img src="../../assets/aopsGeom.jpg" contain height="300"/>
-                                            </a>
-                                        </v-col>
-                                        <v-col cols="12" md="10" class="pl-md-2">
-                                            <p>{{ $t('amc8.aops_series_p') }}</p>
-                                        </v-col>
-                                    </v-row>
-                                </li>
                                 <li class="body-1">
                                     <v-row align="center">
                                         <v-col cols="12" md="2" class="pr-md-2">

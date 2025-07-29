@@ -7,8 +7,8 @@ import VueGtag from 'vue-gtag'
 import { loadFonts } from './plugins/webfontloader'
 
 // Import translations
-import en from './locales/en.json';
-import ch from './locales/ch.json';
+import en from './locales/en';
+import ch from './locales/ch';
 
 // Configure i18n
 const i18n = createI18n({

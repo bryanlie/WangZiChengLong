@@ -59,6 +59,15 @@
                         </v-list-item-content>
                     </v-list-item-action>
                 </v-list-item>
+                <v-list-item :to="'/math/amc10'">
+                    <v-list-item-action>
+                        <v-icon>mdi-chevron-right</v-icon>
+                        <v-icon>mdi-numeric-10-circle-outline</v-icon>
+                        <v-list-item-content>
+                            <v-list-item-title> {{ $t('nav.amc10') }}</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item-action>
+                </v-list-item>
             <v-list-item :to="'/language'">
                 <v-list-item-action>
                     <v-icon class="white--text">mdi-web</v-icon>

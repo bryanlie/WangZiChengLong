@@ -37,6 +37,11 @@ const routes = [
     component: () => import('../views/math/amc8.vue')
   },
   {
+    path: '/math/amc10',
+    name: 'amc10',
+    component: () => import('../views/math/amc10.vue')
+  },
+  {
     path: '/compute/python',
     name: 'python',
     component: () => import('../views/compute/python.vue')
